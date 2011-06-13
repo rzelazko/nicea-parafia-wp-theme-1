@@ -52,16 +52,31 @@ add_filter('next_posts_link_attributes', 'cls_next_action');
 add_filter('previous_posts_link_attributes', 'cls_prev_action');
 
 /******************************************************************************
+ * utilities functions
+ *****************************************************************************/
+if (!function_exists('mb_ucfirst')) {
+	function mb_ucfirst($str, $charset) {
+	    $f = mb_strtoupper(mb_substr($str, 0, 1, $charset), $charset);
+	    return $f . mb_substr($str, 1, mb_strlen($str, $charset), $charset);
+	} 
+}
+
+/******************************************************************************
  * my html helper functions
  *****************************************************************************/
-function my_posted_on() {
+function my_posted_on($ucFirst = true) {
 	$charset = get_bloginfo( 'charset' );
+	$date = mb_strtolower(get_the_date('l, j F Y'), $charset);
+	
+	if ($ucFirst) {
+		$date = mb_ucfirst($date, $charset);
+	}
 	
 	printf( __( '%1$s', 'nicea-parafia' ),
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark">%3$s</a>',
 			get_permalink(),
 			esc_attr( get_the_time() ),
-			ucfirst(mb_strtolower(get_the_date('l, j F Y'), $charset))
+			$date
 		)
 	);
 }

@@ -13,7 +13,7 @@
 			<p class="title">
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 			</p>
-			<p class="meta">Utworzone: <?php the_date('l, j F Y') ?> <!-- by <?php the_author() ?> --></p>
+			<p class="meta">Utworzone: <?php my_posted_on(false); ?></p>
 			
 			<p class="msg">
 				<?php the_excerpt(); ?>
