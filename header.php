@@ -32,7 +32,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
-	<link href="<?php bloginfo( 'template_directory' ); ?>/css/subpage/main.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_directory' ); ?>/css/subpage/main.css" />
 	<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold|PT+Sans+Narrow:regular,bold&subset=latin,cyrillic" rel="stylesheet" type="text/css">
 		
 	<!--[if lt IE 9]>
