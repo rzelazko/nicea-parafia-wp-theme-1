@@ -1,0 +1,6 @@
+#footer .nav ul {
+	*clear: expression(
+		style.marginTop = "" + (offsetHeight < parentNode.offsetHeight ? parseInt((parentNode.offsetHeight - offsetHeight) / 2) + "px" : "0"),
+		style.clear = "none", 0
+	);
+}

@@ -1,0 +1,16 @@
+#header {
+    margin-left: -490px;
+    width: 980px;
+}
+
+*:first-child+html #header { /* IE7 only: fix one pixel shift of header */
+    margin-left: -491px;
+}
+
+.main {
+    width: 980px;
+}
+
+#footer .nav {
+	width: 772px;
+}
