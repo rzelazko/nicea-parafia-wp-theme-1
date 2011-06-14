@@ -10,7 +10,7 @@
 <div class="left">
 	<?php the_post(); ?>
 
-	<h1 class="contentMargin">Parafia Polska -
+	<h1 class="postTitle contentMargin">Parafia Polska -
 		<?php if ( is_day() ) : ?>
 			<?php printf( __( 'ogłoszenia na&nbsp;dzień: <span>%s</span>', 'nicea-parafia' ), get_the_date() ); ?>
 		<?php elseif ( is_month() ) : ?>

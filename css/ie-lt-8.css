@@ -4,3 +4,7 @@
 		style.clear = "none", 0
 	);
 }
+
+#sendComment textarea {
+	width: 582px;
+}

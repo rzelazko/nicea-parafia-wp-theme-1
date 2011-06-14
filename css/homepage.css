@@ -1,0 +1,332 @@
+#bodyLeft {
+    float: left;
+    width: 459px;
+    text-align: left;
+	background-color: #fff;
+}
+
+#bodyRight {
+    float: left;
+    width: 495px;
+    background-color: #d5d5d5;
+}
+
+#bodyLeft .postTitle {
+    margin: 15px 15px 0 17px;
+}
+
+#bodyLeft .post {
+    margin: 1em 15px;
+    padding-bottom: 1em;
+    border-bottom: 1px dotted;
+}
+
+#bodyLeft .post.afterAd {
+    border-top: 1px dotted;
+	padding-top: 1em;
+}
+
+#bodyLeft .post .date {
+    margin: 0 0 1em;
+    font: bold 100% "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+#bodyLeft .post .content {
+	max-height: 6em;
+	overflow: hidden;
+}
+
+#bodyLeft .post.actions {
+	margin-top: 1em;
+	border: none;
+}
+
+#bodyLeft .gallery {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 413px;
+    height: 188px;
+}
+
+#bodyLeft .gallery.garibaldi {
+    background: url(../img/homepage/small-info/garibaldi.jpg) no-repeat center center;	
+}
+
+#bodyLeft .gallery.monaco {
+    background: url(../img/homepage/small-info/monaco.jpg) no-repeat center center;	
+}
+
+#bodyLeft .gallery.villefranche {
+    background: url(../img/homepage/small-info/villefranche.jpg) no-repeat center center;	
+}
+
+#bodyLeft .gallery .place {
+    display: block;
+    font-size: 10pt;
+    position: absolute;
+    color: #fff;
+    background-color: #252525;
+    filter: alpha(opacity = 80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    text-decoration: none;
+    border: none;
+	width: 150px;
+}
+
+#bodyLeft .gallery .place span {
+    margin: 0;
+    padding: 0;
+}
+
+#bodyLeft .gallery .place span.title {
+    display: block;
+    font: 10pt "PT Sans", Arial, Helvetica, sans-serif;
+    margin: 0 0 5px;
+    padding: 0;
+    border-bottom: 1px solid #048000;
+}
+
+#bodyLeft .gallery .place span.time {
+	font-weight: bold;
+	color: #048000;
+}
+
+#bodyLeft .gallery .place img {
+    display: inline;
+    border: none;
+}
+
+#bodyRight .churchesList {
+	overflow: auto;
+	height: 100%;
+}
+
+#bodyRight .churchesList h2 {
+    margin: 0;
+}
+
+#bodyRight .churchesList h2 {
+    color: white;
+    background-color: #353535;
+    margin: 10px 0 0 0;
+    padding: 5px 0;
+	width: 100%;
+}
+
+#bodyRight .churchesList h2 span {
+	padding-left: 15px;
+}
+
+#bodyRight .place {
+    width: 125px;	
+    padding: 3px 0;
+    margin:  25px 20px 15px 15px;
+	
+    background-color: #048000;;
+    color: white;
+    text-align: center;
+    font: 13pt "PT Sans", Arial, Helvetica, sans-serif;
+
+    display: inline; /*IE6 double margin bug*/
+    float: left;
+	clear: left;
+}
+
+#bodyRight .info {
+    width: 325px;
+    padding: 10px 0 15px;
+    margin: 0 10px 10px 0;	
+    border-bottom: 1px dotted;
+	
+    display: inline; /*IE6 double margin bug*/
+    float: left;
+}
+
+#bodyRight .info.last {
+    border: none;
+
+}
+
+#bodyRight .info ul {
+    margin: 5px 0 10px 0;
+}
+
+#bodyRight .info a.more.time span {
+    font: bold 10pt Georgia, "Times New Roman", Times, serif;
+
+}
+
+dl.rssData {
+	border-top: 3px solid #252525;
+}
+
+dl.rssData dt {
+	font: bold 100% "PT Sans", Arial, Helvetica, sans-serif;
+	margin: 5px 0 5px 15px;
+	padding: 0;
+}
+
+dl.rssData dd {
+	margin: 0 0 0 15px;
+	padding: 0;
+}
+
+dl.rssData dd a {
+	color: #252525;
+	border: none;
+    padding-right: 12px;
+    background: url(../img/ico-more.gif) no-repeat right center;	
+}
+
+dl.rssData dd a:hover {
+	color: #048000;
+	border-bottom: 1px dotted #048000;
+    padding-right: 12px;
+    background: url(../img/ico-more.gif) no-repeat right center;	
+}
+
+.contact {
+	background-color: #a5a5a5;
+	border-top: 3px solid #252525;	
+	overflow: auto;
+}
+
+.contact .postTitle,
+.contact p {
+	margin: 0 10px .5em 15px;
+}
+
+.contact .postTitle {
+	margin-top: 5px;
+}
+
+.contact p.actions {
+	margin-bottom: 0;
+	padding-bottom: 1em;
+}
+
+.contact p img {
+	float: right;
+	display: inline;
+	border: 1px solid #048000;
+}
+
+#searchIco:hover {
+    color: #000;
+    text-shadow: 1px 1px 1px #999;
+    border-bottom: 1px dotted #048000;
+}
+
+#searchIco {
+    cursor: pointer;
+}
+
+#headSearch {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #252525;
+    filter: alpha(opacity = 80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+#headSearch .text {
+    width: 170px;
+    margin: 5px 0 5px 5px;
+    border: 1px solid #048000;
+}
+
+#headSearch .button {
+    margin: 5px;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    background-color: #048000;
+    color: #FFF;
+    border: 0 solid;
+    cursor: pointer;
+}
+
+#header {
+    height: 525px;
+}
+
+#content {
+    top: 525px;
+}
+
+#body {
+	background-image: "none";
+	background-color: #a5a5a5;
+}
+
+#headImage {
+    height: 469px;
+    background: url(../img/homepage/main-carousel/cole-de-villefranche.jpg) no-repeat;
+}
+
+#headSlogan {
+    width: 490px;
+    font-size: 12pt;
+	text-align: left;
+}
+
+#headSlogan .place {
+    width: 40%;
+    float: left;
+    text-align: center;
+}
+
+#headSlogan .place .placeName {
+    margin: 10px 10px 5px 10px;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+#headSlogan .place .scroller li {
+    margin: 0;
+	padding: 0;
+	display: inline;
+	cursor: pointer;
+}
+
+#headSlogan .place .scroller img {
+    border: 0;
+}
+
+#headSlogan .place .scroller .bkgd span {
+    display: none;
+}
+
+#headSlogan .place .scroller .selected {
+    color: #048000;
+}
+
+#headSlogan .place .scroller {
+    margin: 5px 10px 0 10px;
+    border-top: 1px solid #048000;
+	padding: 0;
+	display: block;
+}
+
+#headSlogan .msg {
+    width: 60%;
+    float: left;
+}
+
+#headSlogan .msg div {
+    margin: 10px 10px 0 10px;
+}
+
+#headSlogan .msg div.msgSource {
+    font-size: 10pt;
+    margin: 0 10px 10px 10px;
+    text-align: right;
+}
+

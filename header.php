@@ -30,11 +30,12 @@
 	?></title>
 	
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />	
 	
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_directory' ); ?>/css/subpage/main.css" />
-	<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold|PT+Sans+Narrow:regular,bold&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+	<?php if ( is_home() ): ?>
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_directory' ); ?>/css/homepage.css" />
+	<?php endif; ?>
 		
 	<!--[if lt IE 9]>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/css/ie-lt-9.css" type="text/css" rel="stylesheet" />
@@ -44,8 +45,10 @@
 	<![endif]-->
 	<!--[if lte IE 6]>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/css/ie-lte-6.css" type="text/css" rel="stylesheet" />
-		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/css/iepngfix/iepngfix_tilebg.js"></script> 
+		<script src="<?php bloginfo( 'template_directory' ); ?>/css/iepngfix/iepngfix_tilebg.js" type="text/javascript"></script> 
 	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold|PT+Sans+Narrow:regular,bold&subset=latin,cyrillic" />
 	
 	<?php wp_head(); ?>
 </head>

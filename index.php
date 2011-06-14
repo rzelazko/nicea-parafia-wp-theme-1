@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 
 <div class="left">
-	<h1 class="contentMargin">Polska Parafia w Nicei - Ogłoszenia</h1>
+	<h1 class="postTitle contentMargin">Polska Parafia w Nicei - Ogłoszenia</h1>
 		
 	<?php get_template_part( 'loop', 'index' ); ?>
 </div><!-- .left -->

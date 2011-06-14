@@ -5,22 +5,36 @@
  */
 
 /******************************************************************************
- *  menu support 
+ * sets up theme defaults and registers support for various WordPress features 
  *****************************************************************************/
-if (function_exists('add_theme_support')) {
-    add_theme_support('menus');
-}
+add_action( 'after_setup_theme', 'niceaparafia_setup' );
 
-add_action( 'init', 'register_my_menus' );
-
-function register_my_menus() {
+if ( ! function_exists( 'niceaparafia_setup' ) ):
+function niceaparafia_setup() {
+	add_theme_support('menus');
+	
 	register_nav_menus(
 		array(
-			'header-menu' => __( 'Header Menu' ),
-			'footer-menu' => __( 'Footer Menu' )
+			'header-menu' => __( 'Menu w nagłówku' ),
+			'footer-menu' => __( 'Menu w stopce' )
 		)
 	);
+		
+	add_theme_support( 'post-formats', array( 'gallery' ) );
+	
 }
+endif;
+
+/******************************************************************************
+ * add custom gravatar to settings->discussion
+ *****************************************************************************/
+function my_own_gravatar( $avatar_defaults ) {
+    $myavatar = get_bloginfo('template_directory') . '/img/subpage/ico-gravatar.gif';
+    $avatar_defaults[$myavatar] = 'Nicea-Parafia';
+    return $avatar_defaults;
+}
+
+add_filter( 'avatar_defaults', 'my_own_gravatar' );
 
 /******************************************************************************
  * css class to action link adding
@@ -50,16 +64,18 @@ function my_edit_post_link( $link = null, $id = 0 ) {
 
 add_filter('next_posts_link_attributes', 'cls_next_action');
 add_filter('previous_posts_link_attributes', 'cls_prev_action');
+add_filter('next_comments_link_attributes', 'cls_next_action');
+add_filter('previous_comments_link_attributes', 'cls_prev_action');
 
 /******************************************************************************
  * utilities functions
  *****************************************************************************/
-if (!function_exists('mb_ucfirst')) {
-	function mb_ucfirst($str, $charset) {
-	    $f = mb_strtoupper(mb_substr($str, 0, 1, $charset), $charset);
-	    return $f . mb_substr($str, 1, mb_strlen($str, $charset), $charset);
-	} 
-}
+if (!function_exists('mb_ucfirst')):
+function mb_ucfirst($str, $charset) {
+    $f = mb_strtoupper(mb_substr($str, 0, 1, $charset), $charset);
+    return $f . mb_substr($str, 1, mb_strlen($str, $charset), $charset);
+} 
+endif;
 
 /******************************************************************************
  * my html helper functions
@@ -85,11 +101,11 @@ function my_meta_info() {
 	// Retrieves tag list of current post, separated by commas.
 	$tag_list = get_the_tag_list( '', ', ' );
 	if ( $tag_list ) {
-		$posted_in = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'nicea-parafia' );
+		$posted_in = __( 'Wpis w kategorii %1$s oznaczony tagami %2$s. Dodaj do zakładek <a href="%3$s" title="Odnośnik bezpośredni %4$s" rel="bookmark">odnośnik bezpośredni</a>.', 'nicea-parafia' );
 	} elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
-		$posted_in = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'nicea-parafia' );
+		$posted_in = __( 'Wpis w kategorii %1$s. Dodaj do zakładek <a href="%3$s" title="Odnośnik bezpośredni %4$s" rel="bookmark">odnośnik bezpośredni</a>.', 'nicea-parafia' );
 	} else {
-		$posted_in = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'nicea-parafia' );
+		$posted_in = __( 'Dodaj do zakładek <a href="%3$s" title="Odnośnik bezpośredni %4$s" rel="bookmark">odnośnik bezpośredni</a>.', 'nicea-parafia' );
 	}
 	// Prints the string, replacing the placeholders.
 	printf(
@@ -99,4 +115,7 @@ function my_meta_info() {
 		get_permalink(),
 		the_title_attribute( 'echo=0' )
 	);
+}
+
+function niceaparafia_comment( $comment, $args, $depth ) {
 }
