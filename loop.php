@@ -21,7 +21,7 @@
 			
 			<p class="actions">
 				<a class="more action" href="<?php the_permalink() ?>"><span>Więcej</span></a>
-				<a class="comment action" href="<?php the_permalink() ?>#komentuj"><span><?php comments_number( 'Brak komentarzy', 'Jeden komentarz', 'Komentarze %' ); ?></span></a>
+				<a class="comment action" href="<?php the_permalink() ?>#comments"><span><?php comments_number( 'Brak komentarzy', 'Jeden komentarz', 'Komentarze %' ); ?></span></a>
 			</p>
 		</div>
 	

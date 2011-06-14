@@ -15,7 +15,7 @@
 			<p class="actions">
 				<?php my_edit_post_link( '<span>Edytuj ogłoszenie</span>' ); ?>
 				<?php if ( comments_open() ) : ?>
-					<a class="comment action" href="#komentuj"><span>Dodaj komentarz do ogłoszenia</span></a>
+					<a class="comment action" href="#comments"><span>Dodaj komentarz do ogłoszenia</span></a>
 				<?php endif; ?>
 			</p>
 		</div><!-- .postBlock .postDetail -->
