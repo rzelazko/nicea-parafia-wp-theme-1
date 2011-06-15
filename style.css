@@ -470,6 +470,7 @@ form .required {
 .commentsList .commentBox {
 	background-color: #dedede;
 	margin: 0 0 1em 0;
+	overflow: auto;
 }
 
 .commentsList .commentBox img {
