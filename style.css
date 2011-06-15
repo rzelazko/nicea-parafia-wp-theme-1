@@ -223,6 +223,7 @@ h1.contentMargin {
 }
 
 .postBlock .tags,
+.post .meta,
 .postBlock .meta {
     font: 8pt "PT Sans", Arial, Helvetica, sans-serif;
 	color: #666;

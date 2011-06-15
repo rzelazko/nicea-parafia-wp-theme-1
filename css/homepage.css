@@ -26,12 +26,16 @@
 	padding-top: 1em;
 }
 
-#bodyLeft .post .date {
-    margin: 0 0 1em;
+#bodyLeft .post .title {
+    margin: 0 0 .5em;
     font: bold 100% "PT Sans", Arial, Helvetica, sans-serif;
 }
 
-#bodyLeft .post .content {
+#bodyLeft .post .meta {
+    margin: 0 0 1em;
+}
+
+#bodyLeft .post .msg {
 	max-height: 6em;
 	overflow: hidden;
 }
@@ -154,7 +158,8 @@
 }
 
 #bodyRight .info ul {
-    margin: 5px 0 10px 0;
+    margin: 5px 0 10px 0;	
+    padding-left: 2em; 
 }
 
 #bodyRight .info a.more.time span {
@@ -263,7 +268,7 @@ dl.rssData dd a:hover {
 }
 
 #body {
-	background-image: "none";
+	background-image: none;
 	background-color: #a5a5a5;
 }
 
@@ -282,6 +287,9 @@ dl.rssData dd a:hover {
     width: 40%;
     float: left;
     text-align: center;
+    border-bottom: 0;
+    margin: 0;
+    font-size: 12pt;
 }
 
 #headSlogan .place .placeName {

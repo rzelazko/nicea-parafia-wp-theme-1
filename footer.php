@@ -6,7 +6,7 @@
 ?>
         </div><!-- #body -->
     </div><!-- .main -->
-
+    
     <div id="footer">
         <div class="main">        	
 		    <div class="pageLogo">
@@ -19,7 +19,7 @@
 			
 			<div class="nav">
 				<ul>
-					<li><a href="<?php bloginfo( 'url' ); ?>/">Strona główna</a></li>
+					<li><a href="<?php bloginfo( 'url' ); ?>/">Strona główna</a></li>					
 					
             		<?php wp_nav_menu( array( 
             			'theme_location' => 'footer-menu', 
@@ -41,8 +41,12 @@
 <div id="header">
     <div class="nav">
         <ul>
-            <li class="first <?php if (is_home()) : ?> current-menu-item <?php endif; ?>"><a href="<?php bloginfo( 'url' ); ?>/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-hmpg.png" /></a></li>
+            <li class="first <?php if ( is_home() ) : ?> current-menu-item <?php endif; ?>"><a href="<?php bloginfo( 'url' ); ?>/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-hmpg.png" /></a></li>
             
+			<?php if ( is_home() ) : ?>
+				<li><span id="searchIco"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-search.png" /></span></li>
+			<?php endif; ?>
+					
             <?php wp_nav_menu( array( 
             	'theme_location' => 'header-menu', 
             	'container' => '', 
@@ -53,13 +57,7 @@
         </ul>
     </div><!-- .nav -->
 
-    <div id="headImage" class="cross">
-        <div id="headSlogan">
-            <div class="place">
-                Monako - kaplica OO.Karmelitów
-            </div>
-        </div>
-    </div><!-- #headImage -->
+    <?php get_template_part( 'headimage', is_home() ? 'home' : 'subpage' ); ?>
     
     <div class="pageLogo">
         <a href="<?php bloginfo( 'url' ); ?>/">
