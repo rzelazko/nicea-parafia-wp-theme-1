@@ -488,6 +488,11 @@ form .required {
 	font-weight: bold;
 }
 
+.commentsList .commentBox .name em {
+	color: #666666;
+    font: normal 8pt "PT Sans", Arial, Helvetica, sans-serif;
+}
+
 .commentsList .commentBox .date {
 	padding-top: 0;
 }
