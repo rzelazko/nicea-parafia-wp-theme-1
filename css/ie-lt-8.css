@@ -5,6 +5,6 @@
 	);
 }
 
-#sendComment textarea {
+#commentform .comment-form-comment textarea {
 	width: 582px;
 }

@@ -62,6 +62,23 @@ function my_edit_post_link( $link = null, $id = 0 ) {
 	echo apply_filters( 'edit_post_link', $link, $post->ID );
 }
 
+function my_edit_comment_link( $link = null, $before = '', $after = '' ) {
+	global $comment;
+
+	if ( !current_user_can( 'edit_comment', $comment->comment_ID ) )
+		return;
+
+	if ( null === $link )
+		$link = __('Edit This');
+
+	$link = '<a class="edit action" href="' . get_edit_comment_link( $comment->comment_ID ) . '" title="' . esc_attr__( 'Edit comment' ) . '">' . $link . '</a>';
+	echo $before . apply_filters( 'edit_comment_link', $link, $comment->comment_ID ) . $after;
+}
+
+function my_comment_reply_link($args = array(), $comment = null, $post = null) {
+	echo str_replace('comment-reply-link', 'comment action', get_comment_reply_link($args, $comment, $post));
+}
+
 add_filter('next_posts_link_attributes', 'cls_next_action');
 add_filter('previous_posts_link_attributes', 'cls_prev_action');
 add_filter('next_comments_link_attributes', 'cls_next_action');
@@ -118,4 +135,47 @@ function my_meta_info() {
 }
 
 function niceaparafia_comment( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment;
+	switch ( $comment->comment_type ) :
+		case '' : ?>
+			
+			<div id="comment-<?php comment_ID(); ?>" class="commentBox">
+				<?php echo get_avatar( $comment, 38 ); ?>
+				<p class="name">
+					<?php echo get_comment_author_link(); ?>
+					<?php if ( $comment->comment_approved == '0' ) : ?>
+						<em><?php _e( 'Komentarz oczekuje na akceptację', 'nicea-parafia' ); ?></em>
+					<?php endif; ?>
+				</p> <!-- .name -->
+				
+				<p class="date">
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php
+						/* translators: 1: date, 2: time */
+						printf( __( '%1$s %2$s', 'nicea-parafia' ), get_comment_date(),  get_comment_time() ); 
+					?></a><?php my_edit_comment_link( __( '<span>Edytuj</span>', 'nicea-parafia' ), ' ' ); ?>
+				</p> <!-- .date -->
+				
+				<div class="comment"><?php comment_text(); ?></div> <!-- .comment -->
+				
+				<p class="comment reply">
+					<?php my_comment_reply_link( array_merge( $args, array( 
+						'depth' => $depth, 
+						'max_depth' => $args['max_depth'],
+						'reply_text' => '<span>Odpowiedz</span>'
+					) ) ); ?>
+				</p><!-- .reply -->
+			</div> <!-- #comment-<?php comment_ID(); ?> -->
+			
+			<?php break;
+		case 'pingback'  :
+		case 'trackback' : ?>
+			
+			<div id="comment-<?php comment_ID(); ?>" class="commentBox">
+				<div class="comment pingback">
+					<?php _e( 'Pingback:', 'nicea-parafia' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edytuj)', 'nicea-parafia' ), ' ' ); ?>
+				</div> <!-- .comment -->
+			</div> <!-- #comment-<?php comment_ID(); ?> -->
+		
+			<?php break;
+	endswitch;
 }

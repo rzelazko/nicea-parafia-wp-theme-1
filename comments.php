@@ -47,7 +47,7 @@
 		
 		<?php if ( ! comments_open() ) : ?>
 			<div class="commentBox">
-				<div class="comment">Komentarze dla tego wpisu są zamknięte.</div>
+				<div class="comment pingback">Komentarze dla tego wpisu są zamknięte.</div>
 			</div> <!-- .commentBox -->
 		<?php endif; // end if comments closed ?>
 	</div> <!-- .commentsList -->
@@ -56,7 +56,7 @@
 	<?php if ( comments_open() ) : ?>
 		<div class="commentsList contentMargin">
 			<div class="commentBox">
-				<div class="comment">
+				<div class="comment pingback">
 					Brak komentarzy. Dodaj pierwszy wpis używając poniższego formularza.
 				</div>
 			</div> <!-- .commentBox -->
@@ -67,4 +67,28 @@
 		</div> <!-- .contentMargin -->
 	<?php endif; // end if comments closed ?>
 	
-<?php endif; ?>
+<?php endif; // end if have comments ?>
+
+<?php
+$fields =  array(
+	'author' => '<p class="comment-form-author">' . 
+				'<input class="text" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />' . 
+	            '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+	            '</p>',
+	'email'  => '<p class="comment-form-email">' . 
+	            '<input class="text" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' .
+	            '<label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+				'</p>',
+	'url'    => '<p class="comment-form-url">' . 
+	            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" />' .
+	            '<label for="url">' . __( 'Website' ) . '</label>' .
+				'</p>'
+);
+
+comment_form( array(
+	'fields'         => apply_filters( 'comment_form_default_fields', $fields ),
+	'comment_field'  => '<p class="comment-form-comment">' .
+						'<label for="comment">' . _x( 'Comment', 'noun' ) . '</label> <span class="required">*</span>' . 
+						'<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>' . 
+						'</p>',
+) ); ?>
