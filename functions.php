@@ -94,6 +94,11 @@ function mb_ucfirst($str, $charset) {
 } 
 endif;
 
+function my_is_home() {
+	$pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	return is_home() && $pageNumber < 2;
+}
+
 /******************************************************************************
  * my html helper functions
  *****************************************************************************/

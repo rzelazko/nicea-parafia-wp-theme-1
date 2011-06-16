@@ -35,6 +35,25 @@
     margin: 0 0 1em;
 }
 
+#bodyLeft .post .title a,
+#bodyLeft .post .meta a {
+	color: #252525;
+	text-decoration: none;
+	border: 0;
+}
+
+#bodyLeft .post .meta a {
+	color: #666;
+}
+
+#bodyLeft .post .title a:hover,
+#bodyLeft .post .meta a:hover {
+	color: #333;
+	border-color: #333;
+	text-decoration: underline;
+}
+
+
 #bodyLeft .post .msg {
 	max-height: 6em;
 	overflow: hidden;
@@ -43,6 +62,12 @@
 #bodyLeft .post.actions {
 	margin-top: 1em;
 	border: none;
+	clear: both;
+	overflow: auto;
+}
+
+#bodyLeft .post.actions .next {
+	float: right;
 }
 
 #bodyLeft .gallery {
@@ -268,8 +293,7 @@ dl.rssData dd a:hover {
 }
 
 #body {
-	background-image: none;
-	background-color: #a5a5a5;
+    background: url(../img/homepage/bg-body.gif) repeat-y;
 }
 
 #headImage {

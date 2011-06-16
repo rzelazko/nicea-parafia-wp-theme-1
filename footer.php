@@ -41,9 +41,9 @@
 <div id="header">
     <div class="nav">
         <ul>
-            <li class="first <?php if ( is_home() ) : ?> current-menu-item <?php endif; ?>"><a href="<?php bloginfo( 'url' ); ?>/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-hmpg.png" /></a></li>
+            <li class="first <?php if ( my_is_home() ) : ?> current-menu-item <?php endif; ?>"><a href="<?php bloginfo( 'url' ); ?>/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-hmpg.png" /></a></li>
             
-			<?php if ( is_home() ) : ?>
+			<?php if ( my_is_home() ) : ?>
 				<li><span id="searchIco"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-search.png" /></span></li>
 			<?php endif; ?>
 					
@@ -57,7 +57,7 @@
         </ul>
     </div><!-- .nav -->
 
-    <?php get_template_part( 'headimage', is_home() ? 'home' : 'subpage' ); ?>
+    <?php get_template_part( 'headimage', my_is_home() ? 'home' : 'subpage' ); ?>
     
     <div class="pageLogo">
         <a href="<?php bloginfo( 'url' ); ?>/">

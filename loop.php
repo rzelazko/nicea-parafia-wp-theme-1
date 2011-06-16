@@ -34,9 +34,9 @@
 <?php endif; ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
-<?php if (  $wp_query->max_num_pages > 1 ) : ?>	
+<?php if (  $wp_query->max_num_pages > 1 ) :?>	
 	<div class="contentMargin prevNext">
-		<?php previous_posts_link( '<span>Następne</span>' ); ?>
-		<?php next_posts_link( '<span>Poprzednie</span>' ); ?>
+		<?php previous_posts_link( '<span>Nowsze ogłoszenia</span>' ); ?>
+		<?php next_posts_link( '<span>Starsze ogłoszenia</span>' ); ?>
 	</div>
 <?php endif; ?>	

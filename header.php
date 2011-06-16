@@ -20,7 +20,7 @@
 
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
+	if ( $site_description && ( my_is_home() || is_front_page() ) )
 		echo " | $site_description";
 
 	// Add a page number if necessary:
@@ -33,7 +33,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />	
 	
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-	<?php if ( is_home() ): ?>
+	<?php if ( my_is_home() ): ?>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_directory' ); ?>/css/homepage.css" />
 	<?php endif; ?>
 		
