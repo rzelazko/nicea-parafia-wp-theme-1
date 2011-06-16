@@ -36,16 +36,21 @@
 		</div>
 	</div><!-- .churchesList -->
 	
-	<dl class="rssData">
-		<dt>Liturgia słowa</dt>
-		<dd>Czytania: Kpł 19,1-2.11-18; Ps 19,8.9.10.15; Rz 5,12.17-19</dd>
-		<dd>Ewangelia: Mt 25,31-46</dd>
-		
-		<dt>Laboratorium wiary i kultury OPOKA</dt>
-		<dd><a href="/">Joanna Krupska, Jolanta Krasnowska-Dyńka - Duża rodzina to plus</a></dd>
-		<dd><a href="/">Marek Starowieyski - Komentarz Ojców Kościoła</a></dd>
-		<dd><a href="/">Jacek Zjawin - Żyć wiarą</a></dd>
-	</dl><!-- .rssData -->
+	<div class="sidebarBlock">
+		<div class="left">
+			<h3>Wszystkie ogłoszenia</h3>
+			<?php get_calendar( ); ?>
+		</div>
+		<div class="right">
+			<dl>
+				<dt>Liturgia słowa</dt>
+				<dd>Czytanie pierwsze: Kpł&nbsp;19,1-2.11-18</dd>
+				<dd>Czytanie drugie: Ps 19,8.9.10.15</dd>
+				<dd>Czytanie trzecie: Rz 5,12.17-19</dd>
+				<dd>Ewangelia: Mt 25,31-46</dd>
+			</dl>
+		</div>
+	</div><!-- .sidebarBlock -->
 			
 	<div class="contact">
 		<p class="postTitle">Probosz parafii w Nicei</p>

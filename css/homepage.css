@@ -189,42 +189,67 @@
 
 #bodyRight .info a.more.time span {
     font: bold 10pt Georgia, "Times New Roman", Times, serif;
-
 }
 
-dl.rssData {
+.sidebarBlock {
 	border-top: 3px solid #252525;
+	overflow: auto;
 }
 
-dl.rssData dt {
-	font: bold 100% "PT Sans", Arial, Helvetica, sans-serif;
-	margin: 5px 0 5px 15px;
+.sidebarBlock dl {
+	margin: .5em .5em .5em 0;
+}	
+	
+.sidebarBlock dt {
+	font: bold 12pt "PT Sans", Arial, Helvetica, sans-serif;
+	margin: .5em .5em 0 0;
 	padding: 0;
 }
 
-dl.rssData dd {
-	margin: 0 0 0 15px;
+.sidebarBlock dd {
+	margin: .5em .5em 0 0;
 	padding: 0;
 }
 
-dl.rssData dd a {
+.sidebarBlock dd a {
 	color: #252525;
 	border: none;
     padding-right: 12px;
     background: url(../img/ico-more.gif) no-repeat right center;	
 }
 
-dl.rssData dd a:hover {
+.sidebarBlock dd a:hover {
 	color: #048000;
 	border-bottom: 1px dotted #048000;
     padding-right: 12px;
     background: url(../img/ico-more.gif) no-repeat right center;	
 }
 
+.sidebarBlock table#wp-calendar {
+	margin: 0 auto .5em auto;
+}
+
+.sidebarBlock h3 {
+	font: bold 12pt "PT Sans", Arial, Helvetica, sans-serif;
+	margin: .5em 0 0 0;
+	text-align: center;
+}
+
+#body .sidebarBlock .left {
+	float: left;
+	width: 50%;
+}
+
+#body .sidebarBlock .right {
+	float: right;
+	width: 50%;
+}
+
 .contact {
 	background-color: #a5a5a5;
 	border-top: 3px solid #252525;	
 	overflow: auto;
+	clear: both;
 }
 
 .contact .postTitle,
