@@ -7,32 +7,35 @@
 <div id="bodyRight">
 	<div class="churchesList">
 		<h2><span>Msze Święte na Lazurowym Wybrzeżu</span></h2>
-		<a class="place" href="/">Nicea</a>
+		<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea">Nicea</a>
 		<div class="info">
 			<p>W Nicei Msza Święta odbywa się w każdą niedzielę w dwóch miejscach:</p>
 			<ul>
-				<li> Cole de Villefranche:  <a href="#" class="more time"><span>10:00</span></a></li>
-				<li> Place Garibaldi: <a href="#" class="more time"><span>19:30</span></a></li>
+				<li> Cole de Villefranche:  <a href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea" class="more time"><span>10:00</span></a></li>
+				<li> Place Garibaldi: <a href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea" class="more time"><span>19:30</span></a></li>
 			</ul>
-			<a class="action more" href="/"><span>Kościół Polski Cannes, zdjęcia, mapa dojazdu</span></a>
+			<a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea"
+				><span>Kościół Polski Nicea, zdjęcia, mapa dojazdu</span></a>
 		</div>
 		
-		<a class="place" href="/">Cannes</a>
+		<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-cannes">Cannes</a>
 		<div class="info">
 			<p>W Cannes Polska Masza Święta odbywa się w pierwszą i drugą niedzielę miesiąca:</p>
 			<ul>
-				<li> Eglise Sacre-Coeur: <a href="#" class="more time"><span>15:30</span></a></li>
+				<li> Eglise Sacre-Coeur: <a href="<?php bloginfo( 'url' ); ?>/kosciol-polski-cannes" class="more time"><span>15:30</span></a></li>
 			</ul>
-			<a class="action more" href="/"><span>Kościół Polski Monaco, zdjęcia, mapa dojazdu</span></a>
+			<a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-cannes"
+				><span>Kościół Polski Cannes, zdjęcia, mapa dojazdu</span></a>
 		</div>
 		
-		<a class="place" href="/">Monaco</a>
+		<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-monako">Monako</a>
 		<div class="info last">
 			<p>W Monako Polska Msza Święta odbywa się w trzecią i czwartą niedzielę miesiąca</p>
 			<ul>
-				 <li> Eglise Sainte Devote: <a href="#" class="more time"><span>15:30</span></a></li>
-			</ul>
-			<a class="action more" href="/"><span>Kościół Polski Nicea, zdjęcia, mapa dojazdu</span></a>
+				 <li> Eglise Sainte Devote: <a href="<?php bloginfo( 'url' ); ?>/kosciol-polski-monako" class="more time"><span>15:30</span></a></li>
+			</ul>			
+			<a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-monako"
+				><span>Kościół Polski Monaco, zdjęcia, mapa dojazdu</span></a>
 		</div>
 	</div><!-- .churchesList -->
 	
@@ -68,7 +71,7 @@
 			Tel. kom. FR: 06 26 80 68 47
 		</p>
 		<p class="actions">
-			<a class="action more" href="/"><span>Więcej</span></a>
+			<a class="action more" href="<?php bloginfo( 'url' ); ?>/kontakt"><span>Więcej</span></a>
 		</p>
 	</div><!-- .contact -->
 </div><!-- #bodyRight -->

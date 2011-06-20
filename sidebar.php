@@ -5,11 +5,7 @@
  */
 ?>
 <div class="right">
-	<form id="headSearch" method="GET" action="<?php bloginfo( 'url' ); ?>">
-		<input type="text" name="s" value="<?php echo get_search_query() ?>" class="text" />
-		<input type="submit" value="Szukaj" class="button" />
-	</form>
-
+	<?php get_search_form(); ?>
 	<div class="rightBlock contentMargin">
 		<h2>Proboszcz Parafii w Nicei</h2>
 		<h3>Ks. Bronisław Rosiek</h3>

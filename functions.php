@@ -5,6 +5,35 @@
  */
 
 /******************************************************************************
+ * setup administrative theme option page 
+ *****************************************************************************/
+require_once ( get_template_directory() . '/theme-options.php' );
+
+function getCarouselSettings() {
+	global $niceaparafia_default_options;
+	$options = get_option( 'niceaparafia_theme_options', $niceaparafia_default_options );
+	$settings = array();
+		
+	foreach ($options as $optKey => $optVal) {
+		if ( strpos($optKey, 'homeimg') === 0 ) {
+			$idx = preg_replace('/[^0-9]*/', '', $optKey);
+			$key = preg_replace('/homeimg([0-9]+)_/', '', $optKey);
+			
+			if ( is_array($settings[$idx]) ) {
+				$settings[$idx][$key] = $optVal;
+			} else {
+				$settings[$idx] = array($key => $optVal);
+			}
+			
+			if ($key == 'src') {
+				$settings[$idx][$key] = get_bloginfo( 'template_directory' ) . '/img/homepage/main-carousel/' . $settings[$idx][$key];
+			}
+		}
+	}
+	return $settings;
+}
+
+/******************************************************************************
  * sets up theme defaults and registers support for various WordPress features 
  *****************************************************************************/
 add_action( 'after_setup_theme', 'niceaparafia_setup' );

@@ -7,9 +7,23 @@
 
 <?php /* Start the Loop */ ?>
 <?php if (have_posts()) : ?>
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php $i = 0; while ( have_posts() ) : the_post(); ?>
+	
+		<?php if ( $i == 2 ) : ?>
+			
+			<div class="gallery garibaldi">
+				<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea">
+					<span class="title">Plac Garibaldi</span>
+					<span>
+						Niedzielna Msza Święta o godzinie 
+						<span class="time">19:30</span> <img src="img/ico-more.gif" alt="Więcej" />
+					</span>
+				</a>
+			</div> <!-- gallery -->
+			
+		<?php endif; ?>
 		
-		<div class="post">
+		<div class="post <?php if ( $i == 2 ) : ?> afterAd <?php endif; ?>">
 			<p class="title">
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 			</p>
@@ -24,7 +38,7 @@
 			</p>
 		</div> <!-- .post -->
 	
-	<?php endwhile; ?>
+	<?php $i++; endwhile; ?>
 <?php else : ?>
 	<div class="post">
 		<p class="title">Brak ogłoszeń</p>
