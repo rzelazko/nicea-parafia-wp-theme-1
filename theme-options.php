@@ -51,7 +51,7 @@ function theme_options_add_page() {
 	add_theme_page( 
 		__( 'Ustawienia wyglądu', 'niceaparafia' ), 
 		__( 'Ustawienia wyglądu', 'niceaparafia' ), 
-		'edit_pages', // default 'edit_theme_options' requires administrative rights, 
+		'edit_theme_options', 
 		'theme_options', 
 		'theme_options_do_page' );
 } 
