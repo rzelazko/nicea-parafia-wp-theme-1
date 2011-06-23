@@ -4,10 +4,11 @@
  * @subpackage Nicea-Parafia
  */
 ?>
-<div id="headImage" class="cross">
+<?php $subpSettings = getSubpImg(); ?>
+<div id="headImage" class="<?php echo $subpSettings['cls']; ?>">
 	<div id="headSlogan">
 		<div class="place">
-			Monako - kaplica OO.Karmelitów
+			<?php echo $subpSettings['place']; ?>
 		</div>
 	</div>
 </div><!-- #headImage -->

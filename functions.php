@@ -10,27 +10,41 @@
 require_once ( get_template_directory() . '/theme-options.php' );
 
 function getCarouselSettings() {
-	global $niceaparafia_default_options;
-	$options = get_option( 'niceaparafia_theme_options', $niceaparafia_default_options );
+	$np_def_carousel_opts = getDefaultOptions('carousel');
+	
+	$options = get_option( 'niceaparafia_theme_carousel', $np_def_carousel_opts );
 	$settings = array();
 		
 	foreach ($options as $optKey => $optVal) {
-		if ( strpos($optKey, 'homeimg') === 0 ) {
-			$idx = preg_replace('/[^0-9]*/', '', $optKey);
-			$key = preg_replace('/homeimg([0-9]+)_/', '', $optKey);
-			
-			if ( is_array($settings[$idx]) ) {
-				$settings[$idx][$key] = $optVal;
-			} else {
-				$settings[$idx] = array($key => $optVal);
-			}
-			
-			if ($key == 'src') {
-				$settings[$idx][$key] = get_bloginfo( 'template_directory' ) . '/img/homepage/main-carousel/' . $settings[$idx][$key];
-			}
+		$idx = preg_replace('/[^0-9]*/', '', $optKey);
+		$key = preg_replace('/homeimg([0-9]+)_/', '', $optKey);
+		
+		if ( is_array($settings[$idx]) ) {
+			$settings[$idx][$key] = $optVal;
+		} else {
+			$settings[$idx] = array($key => $optVal);
+		}
+		
+		if ($key == 'src') {
+			$settings[$idx][$key] = get_bloginfo( 'template_directory' ) . '/img/homepage/main-carousel/' . $settings[$idx][$key];
 		}
 	}
 	return $settings;
+}
+
+function getSubpImg() {
+	$np_def_subpage_opts = getDefaultOptions('subpage-img');
+	
+	$options = get_option( 'niceaparafia_theme_subpimg', $np_def_subpage_opts );
+	$rand_key = array_rand($options);
+	$rand_key = preg_replace('/_[a-z]+$/', '', $rand_key);
+	
+	$opt = array();
+	$opt['cls'] = $options[$rand_key . '_cls'];
+	$opt['src'] = $options[$rand_key . '_src'];
+	$opt['place'] = $options[$rand_key . '_place'];
+	
+	return $opt;
 }
 
 /******************************************************************************

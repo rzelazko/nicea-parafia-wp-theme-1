@@ -807,11 +807,11 @@ form .required {
 }
 
 #headImage.monaco {
-    background: url(img/subpage/monaco.jpg) no-repeat;
+    background: url(img/subpage/top/monaco.jpg) no-repeat;
 }
 
 #headImage.cross {
-    background: url(img/subpage/church-cross.jpg) no-repeat;
+    background: url(img/subpage/top/church-cross.jpg) no-repeat;
 }
 
 #headSlogan {
