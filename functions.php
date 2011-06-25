@@ -16,9 +16,9 @@ function getCarouselSettings() {
 	$settings = array();
 		
 	foreach ($options as $optKey => $optVal) {
-		$idx = preg_replace('/[^0-9]*/', '', $optKey);
-		$key = preg_replace('/homeimg([0-9]+)_/', '', $optKey);
-		
+		$idx = preg_replace('/^homeimg([0-9]+)_[a-zA-Z0-9]+$/', '$1', $optKey);
+		$key = preg_replace('/^homeimg([0-9]+)_/', '', $optKey);
+	
 		if ( is_array($settings[$idx]) ) {
 			$settings[$idx][$key] = $optVal;
 		} else {
@@ -27,6 +27,12 @@ function getCarouselSettings() {
 		
 		if ($key == 'src') {
 			$settings[$idx][$key] = get_bloginfo( 'template_directory' ) . '/img/homepage/main-carousel/' . $settings[$idx][$key];
+		} 
+		elseif ($key == 'place1') {
+			$settings[$idx]['place'] = $optVal;
+		}
+		elseif ($key == 'place2') {
+			$settings[$idx]['place'] .= '<br/>' . $optVal;
 		}
 	}
 	return $settings;
@@ -43,6 +49,23 @@ function getSubpImg() {
 	$opt['cls'] = $options[$rand_key . '_cls'];
 	$opt['src'] = $options[$rand_key . '_src'];
 	$opt['place'] = $options[$rand_key . '_place'];
+	
+	return $opt;
+}
+
+function getSubpAdv() {
+	$np_def_galleries = getDefaultOptions('galleries');
+	
+	$options = get_option( 'niceaparafia_theme_galleries', $np_def_galleries );
+	$rand_key = array_rand($options);
+	$rand_key = preg_replace('/_[a-z]+$/', '', $rand_key);
+	
+	$opt = array();
+	$opt['cls'] = $options[$rand_key . '_cls'];
+	$opt['src'] = $options[$rand_key . '_src'];
+	$opt['url'] = $options[$rand_key . '_url'];
+	$opt['title'] = $options[$rand_key . '_title'];
+	$opt['msg'] = $options[$rand_key . '_msg'];
 	
 	return $opt;
 }

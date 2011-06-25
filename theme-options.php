@@ -8,27 +8,32 @@ function getDefaultOptions($type) {
 	if ($type == 'carousel') {
 		$np_def_carousel_opts = array(
 			'homeimg0_src' => 'cole-de-villefranche.jpg',
-			'homeimg0_place' => 'Cole de Villefranche<br/>Nicea',
+			'homeimg0_place1' => 'Cole de Villefranche',
+			'homeimg0_place2' => 'Nicea',
 			'homeimg0_msg' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices consequat arcu, ac vehicula justo ultrices dapibus.',
 			'homeimg0_msgSource' => 'Lipsum.com',
 		
 			'homeimg1_src' => 'val-d-allos.jpg',
-			'homeimg1_place' => 'Val d\'Allos<br/>Alpy Prowansalskie',
+			'homeimg1_place1' => 'Val d\'Allos',
+			'homeimg1_place2' => 'Alpy Prowansalskie',
 			'homeimg1_msg' => 'Donec mi est, euismod at ultricies quis, pretium eget mi. Etiam vitae lorem quam. Donec fermentum, nisi ut vehicula sodales, ante nisi dapibus elit, nec rhoncus erat dolor a massa.',
 			'homeimg1_msgSource' => 'Praesent leo',
 		
 			'homeimg2_src' => 'chemin-de-l-energie.jpg',
-			'homeimg2_place' => 'Chemin de l\'Energie<br/>Alpy Nadmorskie',
+			'homeimg2_place1' => 'Chemin de l\'Energie',
+			'homeimg2_place2' => 'Alpy Nadmorskie',
 			'homeimg2_msg' => 'A potem Bóg rzekł &laquo;Niech zbiorą się wody spod nieba w jedno miejsce i niech się ukaże powierzchnia sucha!&raquo;',
 			'homeimg2_msgSource' => 'Rdz 1',
 		
 			'homeimg3_src' => 'promenade-des-anglais.jpg',
-			'homeimg3_place' => 'Promenade des Anglais<br/>Nicea',
+			'homeimg3_place1' => 'Promenade des Anglais',
+			'homeimg3_place2' => 'Nicea',
 			'homeimg3_msg' => 'Vestibulum a lorem in mi cursus vehicula. Mauris non lectus nunc, sed congue magna. Sed turpis sem, pretium non ultricies sed, pretium at odio. Nam in justo at lorem laoreet pharetra.',
 			'homeimg3_msgSource' => 'Lorem Ipsum',
 		
 			'homeimg4_src' => 'st-pierre.jpg',
-			'homeimg4_place' => 'Chapelle Saint Pierre<br/>Saint Paul de Vence',
+			'homeimg4_place1' => 'Chapelle Saint Pierre',
+			'homeimg4_place2' => 'Saint Paul de Vence',
 			'homeimg4_msg' => 'Phasellus eu dui massa, ut sollicitudin metus. Donec ac risus mauris. Nullam dui est, tempus at volutpat at, accumsan venenatis neque.',
 			'homeimg4_msgSource' => 'Neque porro'
 		);
@@ -68,6 +73,23 @@ function getDefaultOptions($type) {
 		
 		return $np_def_homepage_adv;
 	}
+	else if ($type == 'galleries') {
+		$np_def_galleries = array(
+			'gallery0_src' => 'villefranche-01.jpg',
+			'gallery0_cls' => 'villefranche01',
+			'gallery0_url' => '/tag/galeria',
+			'gallery0_title' => 'Galeria parafialna',
+			'gallery0_msg' => 'Piknik Villefranche 02-05-2010',
+		
+			'gallery1_src' => 'villefranche-02.jpg',
+			'gallery1_cls' => 'villefranche02',
+			'gallery1_url' => '/tag/galeria',
+			'gallery1_title' => 'Galeria parafialna',
+			'gallery1_msg' => 'Piknik Villefranche 02-05-2010'			
+		);
+		
+		return $np_def_galleries;
+	}	
 	
 	$np_def_subpage_opts = array(
 		'subpimg0_cls' => 'cross',
@@ -94,6 +116,7 @@ function theme_options_init(){
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_carousel' );
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_subpimg' );
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_hmpgadv' );
+	register_setting( 'niceaparafia_options', 'niceaparafia_theme_galleries' );
 } 
 
 /**
@@ -115,6 +138,7 @@ function theme_options_do_page() {
 	$np_def_carousel_opts = getDefaultOptions('carousel');
 	$np_def_subpage_opts = getDefaultOptions('subpage-img');
 	$np_def_homepage_adv = getDefaultOptions('homepage-adverts');
+	$np_def_galleries = getDefaultOptions('galleries');
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false;
@@ -147,23 +171,39 @@ function theme_options_do_page() {
 							<fieldset>
 								<p><label>
 									<input class="regular-text" type="text"
-										id="niceaparafia_theme_carousel[<?php echo $opt_key ?>_place]"
-										name="niceaparafia_theme_carousel[<?php echo $opt_key ?>_place]" 
-										value="<?php esc_attr_e( $carousel_options[$opt_key . '_place'] ); ?>" />
-								</label>Nazwa miejsca</p>
+										id="niceaparafia_theme_carousel[<?php echo $opt_key ?>_place1]"
+										name="niceaparafia_theme_carousel[<?php echo $opt_key ?>_place1]" 
+										value="<?php esc_attr_e( $carousel_options[$opt_key . '_place1'] ); ?>" />
+										Nazwa miejsca
+									<span class="description">Pierwsza linia w nazwie miejsca</span>
+								</label></p>
+								
+								<p><label>
+									<input class="regular-text" type="text"
+										id="niceaparafia_theme_carousel[<?php echo $opt_key ?>_place2]"
+										name="niceaparafia_theme_carousel[<?php echo $opt_key ?>_place2]" 
+										value="<?php esc_attr_e( $carousel_options[$opt_key . '_place2'] ); ?>" />
+									Nazwa miejsca
+									<span class="description">Druga linia w nazwie miejsca</span>
+								</label></p>
+								
 								<p><label>
 									<textarea class="regular-text" cols="40" rows="3" 
 										id="niceaparafia_theme_carousel[<?php echo $opt_key ?>_msg]"
 										name="niceaparafia_theme_carousel[<?php echo $opt_key ?>_msg]"
 										><?php esc_attr_e( $carousel_options[$opt_key . '_msg'] ); ?></textarea>
-								</label>Cytat</p>
+									Cytat
+								</label></p>
+								
 								<p><label>
 									<input class="regular-text" type="text"
 										id="niceaparafia_theme_carousel[<?php echo $opt_key ?>_msgSource]"
 										name="niceaparafia_theme_carousel[<?php echo $opt_key ?>_msgSource]" 
 										value="<?php esc_attr_e( $carousel_options[$opt_key . '_msgSource'] ); ?>" />
-								</label>Źródło</p>
+									Źródło
+								</label></p>
 							</fieldset>
+							
 							<input type="hidden" 
 								name="niceaparafia_theme_carousel[<?php echo $opt_key ?>_src]" 
 								value="<?php esc_attr_e( $carousel_options[$opt_key . '_src'] ); ?>" />
@@ -172,7 +212,7 @@ function theme_options_do_page() {
 				<?php endfor; ?>
 			</table>
 			
-			<h3>Podstrony</h3>			
+			<h3>Podstrony - nagłówki</h3>			
 			<table class="form-table">
 
 				<?php $subp_options = get_option( 'niceaparafia_theme_subpimg', $np_def_subpage_opts ); ?>
@@ -192,10 +232,13 @@ function theme_options_do_page() {
 										id="niceaparafia_theme_subpimg[<?php echo $opt_key ?>_place]"
 										name="niceaparafia_theme_subpimg[<?php echo $opt_key ?>_place]" 
 										value="<?php esc_attr_e( $subp_options[$opt_key . '_place'] ); ?>" />
-								</label>Nazwa miejsca</p>
+									Nazwa miejsca
+								</label></p>
+								
 							<input type="hidden" 
 								name="niceaparafia_theme_subpimg[<?php echo $opt_key ?>_src]" 
 								value="<?php esc_attr_e( $subp_options[$opt_key . '_src'] ); ?>" />
+								
 							<input type="hidden" 
 								name="niceaparafia_theme_subpimg[<?php echo $opt_key ?>_cls]" 
 								value="<?php esc_attr_e( $subp_options[$opt_key . '_cls'] ); ?>" />
@@ -225,8 +268,10 @@ function theme_options_do_page() {
 										name="niceaparafia_theme_hmpgadv[<?php echo $opt_key ?>_enabled]" 
 										value="1" />
 									Wyświetlaj reklamę
-								</label><span class="description">Odznaczenie opcji spowoduje, 
-								że reklama przestanie się ukazywać na stronie</span></p>
+									<span class="description">Odznaczenie opcji spowoduje, 
+										że reklama przestanie się ukazywać na stronie</span>
+								</label></p>
+								
 								<p><label>
 									<input class="regular-text" type="text"
 										id="niceaparafia_theme_hmpgadv[<?php echo $opt_key ?>_place]"
@@ -234,26 +279,85 @@ function theme_options_do_page() {
 										value="<?php esc_attr_e( $hadv_options[$opt_key . '_place'] ); ?>" />
 									Nazwa miejsca
 								</label></p>
+								
 								<p><label>
 									<input class="regular-text" type="text"
 										id="niceaparafia_theme_hmpgadv[<?php echo $opt_key ?>_msg]"
 										name="niceaparafia_theme_hmpgadv[<?php echo $opt_key ?>_msg]" 
 										value="<?php esc_attr_e( $hadv_options[$opt_key . '_msg'] ); ?>" />
 									Treść reklamy
-								</label><span class="description">Właściwa treść reklamy</span></p>
+									<span class="description">Właściwa treść reklamy</span>
+								</label></p>
+								
 								<p><label>
 									<input class="regular-text" type="text"
 										id="niceaparafia_theme_hmpgadv[<?php echo $opt_key ?>_url]"
 										name="niceaparafia_theme_hmpgadv[<?php echo $opt_key ?>_url]" 
 										value="<?php esc_attr_e( $hadv_options[$opt_key . '_url'] ); ?>" />
 									URL
-								</label><span class="description">Adres strony, do której prowadzi reklama</span></p>
+									<span class="description">Adres strony, do której prowadzi reklama</span>
+								</label></p>
+								
 							<input type="hidden" 
 								name="niceaparafia_theme_hmpgadv[<?php echo $opt_key ?>_src]" 
 								value="<?php esc_attr_e( $hadv_options[$opt_key . '_src'] ); ?>" />
+								
 							<input type="hidden" 
 								name="niceaparafia_theme_hmpgadv[<?php echo $opt_key ?>_cls]" 
 								value="<?php esc_attr_e( $hadv_options[$opt_key . '_cls'] ); ?>" />
+						</td>
+					</tr>
+				<?php endfor; ?>
+			</table>
+			
+			<h3>Reklamy / galerie - podstrona</h3>
+			<table class="form-table">
+
+				<?php $gall_options = get_option( 'niceaparafia_theme_galleries', $np_def_galleries ); ?>
+				<?php $gall_keys = array_keys($gall_options); ?>
+				<?php arsort($gall_keys); ?>
+				<?php $total_opts = preg_replace('/[^0-9]*/', '', current($gall_keys)); ?>
+				<?php for ($i = 0; $i <= $total_opts; $i++) : ?>
+					<?php $opt_key = 'gallery' . $i; ?>
+					<tr valign="top">
+						<th scope="row"><img 
+							src="<?php bloginfo( 'template_directory' ) ?>/img/subpage/galleries-admin/<?php echo $gall_options[$opt_key . '_src']; ?>" 
+							alt="" /></th>
+						<td>
+							<fieldset>
+								<p><label>
+									<input class="regular-text" type="text"
+										id="niceaparafia_theme_galleries[<?php echo $opt_key ?>_title]"
+										name="niceaparafia_theme_galleries[<?php echo $opt_key ?>_title]" 
+										value="<?php esc_attr_e( $gall_options[$opt_key . '_title'] ); ?>" />
+									Tytuł reklamy
+								</label></p>
+								
+								<p><label>
+									<input class="regular-text" type="text"
+										id="niceaparafia_theme_galleries[<?php echo $opt_key ?>_msg]"
+										name="niceaparafia_theme_galleries[<?php echo $opt_key ?>_msg]" 
+										value="<?php esc_attr_e( $gall_options[$opt_key . '_msg'] ); ?>" />
+									Treść reklamy
+									<span class="description">Właściwa treść reklamy</span>
+								</label></p>
+								
+								<p><label>
+									<input class="regular-text" type="text"
+										id="niceaparafia_theme_galleries[<?php echo $opt_key ?>_url]"
+										name="niceaparafia_theme_galleries[<?php echo $opt_key ?>_url]" 
+										value="<?php esc_attr_e( $gall_options[$opt_key . '_url'] ); ?>" />
+									URL
+									<span class="description">Adres strony, do której prowadzi reklama</span>
+								</label></p>
+								
+							<input type="hidden" 
+								name="niceaparafia_theme_galleries[<?php echo $opt_key ?>_src]" 
+								value="<?php esc_attr_e( $gall_options[$opt_key . '_src'] ); ?>" />
+								
+							<input type="hidden" 
+								name="niceaparafia_theme_galleries[<?php echo $opt_key ?>_cls]" 
+								value="<?php esc_attr_e( $gall_options[$opt_key . '_cls'] ); ?>" />
 						</td>
 					</tr>
 				<?php endfor; ?>

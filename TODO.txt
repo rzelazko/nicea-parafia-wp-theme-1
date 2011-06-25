@@ -38,8 +38,8 @@
 + [headimage] zarzadzanie sloganami na podstronach
 + [functions, headimage] losowanie obrazka na podstrone
 + [loop-home] zarzadzanie reklamami (losowe wyswietlanie, zarzadzanie w panelu administracyjnym)
++ [sidebar] zarzadzanie reklamami <<galeria>> (losowe wyswietlanie, zarzadzanie w panelu administracyjnym)
 
-- [sidebar] zarzadzanie reklamami <<galeria>> (losowe wyswietlanie, zarzadzanie w panelu administracyjnym)
 - [sidebar-home] edytowalne zdjecie ksiedza
 - [reklama] zdjecie kosciola w cannes na reklame na str glowna
 ! [headimage-*] zdjecia na strone glowna / podstrony

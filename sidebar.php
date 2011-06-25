@@ -23,12 +23,13 @@
 	</div>
 
 	<div class="rightBlock contentMargin dotted">
-		<div class="rightGallery villefranche01">
-			<a class="place" href="<?php bloginfo( 'url' ); ?>/tag/galeria">
-				<span class="title">Galeria parafialna</span>
+		<?php $subpGall = getSubpAdv(); ?>
+		<div class="rightGallery <?php echo $subpGall['cls']; ?>">
+			<a class="place" href="<?php bloginfo( 'url' ); ?><?php echo $subpGall['url']; ?>">
+				<span class="title"><?php echo $subpGall['title']; ?></span>
 				<span>
-					Piknik Villefranche<br/>
-					02-05-2010 <img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-more.gif" alt="Więcej" />
+					<?php echo $subpGall['msg']; ?>
+					<img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-more.gif" alt="Więcej" />
 				</span>
 			</a>
 		</div>
