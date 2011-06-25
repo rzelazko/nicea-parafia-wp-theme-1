@@ -16,7 +16,7 @@
 					<span class="title">Plac Garibaldi</span>
 					<span>
 						Niedzielna Msza Święta o godzinie 
-						<span class="time">19:30</span> <img src="img/ico-more.gif" alt="Więcej" />
+						<span class="time">19:30</span> <img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-more.gif" alt="Więcej" />
 					</span>
 				</a>
 			</div> <!-- gallery -->

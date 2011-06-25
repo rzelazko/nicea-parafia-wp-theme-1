@@ -41,7 +41,7 @@
 - [loop-home, sidebar] zarzadzanie reklamami (losowe wyswietlanie, zarzadzanie w panelu administracyjnym)
 ! [headimage-*] zdjecia na strone glowna / podstrony
 ! [headimage-home] opisy zdjec i hasla do nich
-- [sidebar-home] panel boczny zarzadzanie kosciolami
++ [sidebar-home] panel boczny zarzadzanie kosciolami
 - [sidebar-home] panel boczny zarzadzanie informacjami kontaktowymi
 - [sidebar] panel boczny - archiwum
 - [sidebar] panel boczny - msze

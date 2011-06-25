@@ -136,11 +136,11 @@
 	height: 100%;
 }
 
-#bodyRight .churchesList h2 {
+#bodyRight .churchesList h3 {
     margin: 0;
 }
 
-#bodyRight .churchesList h2 {
+#bodyRight .churchesList h3 {
     color: white;
     background-color: #353535;
     margin: 10px 0 0 0;
@@ -148,7 +148,7 @@
 	width: 100%;
 }
 
-#bodyRight .churchesList h2 span {
+#bodyRight .churchesList h3 span {
 	padding-left: 15px;
 }
 

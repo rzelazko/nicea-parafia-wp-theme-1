@@ -5,8 +5,10 @@
  */
 ?>
 <div id="bodyRight">
+	
 	<div class="churchesList">
-		<h2><span>Msze Święte na Lazurowym Wybrzeżu</span></h2>
+		<h3><span>Msze Święte na Lazurowym Wybrzeżu</span></h3>
+		<?php if (!dynamic_sidebar('homepage-top') ) : ?>
 		<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea">Nicea</a>
 		<div class="info">
 			<p>W Nicei Msza Święta odbywa się w każdą niedzielę w dwóch miejscach:</p>
@@ -37,11 +39,14 @@
 			<a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-monako"
 				><span>Kościół Polski Monaco, zdjęcia, mapa dojazdu</span></a>
 		</div>
+		<?php endif; ?>
 	</div><!-- .churchesList -->
+	
+	
 	
 	<div class="sidebarBlock">
 		<div class="left">
-			<h3>Wszystkie ogłoszenia</h3>
+			<span class="title">Wszystkie ogłoszenia</span>
 			<?php get_calendar( ); ?>
 		</div>
 		<div class="right">
@@ -54,24 +59,28 @@
 			</dl>
 		</div>
 	</div><!-- .sidebarBlock -->
-			
+	
+				
 	<div class="contact">
 		<p class="postTitle">Probosz parafii w Nicei</p>
 		<p>
 			<img src="<?php bloginfo( 'template_directory' ); ?>/img/homepage/bronislaw-rosiek-01.jpg" 
 				alt="Ksiądz Bronisław Rosiek" />
-			<strong>Ks. Bronisław Rosiek</strong><br/>
-			<br/>
-			Miejsce zamieszkania Proboszcza:<br/>
-			142 Avenue de la Californie<br/>
-			06200 Nice, France<br/>
-			<br/>
-			Tel./Fax: 04 97 07 12 29<br/>
-			Tel. kom. PL: 0048 146 907 120<br/>
-			Tel. kom. FR: 06 26 80 68 47
+			<?php if (!dynamic_sidebar('homepage-bottom') ) : ?>
+				<strong>Ks. Bronisław Rosiek</strong><br/>
+				<br/>
+				Miejsce zamieszkania Proboszcza:<br/>
+				142 Avenue de la Californie<br/>
+				06200 Nice, France<br/>
+				<br/>
+				Tel./Fax: 04 97 07 12 29<br/>
+				Tel. kom. PL: 0048 146 907 120<br/>
+				Tel. kom. FR: 06 26 80 68 47
+			<?php endif; ?>
 		</p>
 		<p class="actions">
 			<a class="action more" href="<?php bloginfo( 'url' ); ?>/kontakt"><span>Więcej</span></a>
 		</p>
 	</div><!-- .contact -->
+	
 </div><!-- #bodyRight -->

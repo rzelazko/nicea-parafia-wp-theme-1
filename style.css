@@ -95,17 +95,18 @@ h1 {
     font: 18pt "PT Sans", Arial, Helvetica, sans-serif;
 }
 
-h2 {
+h3 {
     font: 14pt "PT Sans", Arial, Helvetica, sans-serif;
 }
 
-h3 {
-    font: 12pt "PT Sans", Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
 
 h4, h5, h6 {
     font-size: 12pt;
+    font-weight: bold;
+}
+
+.title span {
+    font: 12pt "PT Sans", Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
@@ -342,7 +343,7 @@ form .required {
     padding: 5px 0;
 }
 
-.rightBlock h2 {
+.rightBlock h3 {
     margin: 0 0 1em 0;
     border-bottom: 1px solid #048000;
 }
