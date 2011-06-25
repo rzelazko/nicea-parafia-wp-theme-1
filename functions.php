@@ -47,6 +47,35 @@ function getSubpImg() {
 	return $opt;
 }
 
+function getHomeAdv() {
+	$np_def_homepage_adv = getDefaultOptions('homepage-adverts');
+	
+	$options = get_option( 'niceaparafia_theme_hmpgadv', $np_def_homepage_adv );
+	$settings = array();
+	
+	foreach ($options as $optKey => $optVal) {
+		$idx = preg_replace('/[^0-9]*/', '', $optKey);
+		$key = preg_replace('/adv([0-9]+)_/', '', $optKey);
+		
+		if ( is_array($settings[$idx]) ) {
+			$settings[$idx][$key] = $optVal;
+		} else {
+			$settings[$idx] = array($key => $optVal);
+		}
+		
+		if ($key == 'msg') {
+			$settings[$idx][$key] = preg_replace('/([0-9]{2}:[0-9]{2})/', '<span class="time">$1</span>', $optVal);
+		}
+	}
+	
+	$adv_arr = array_filter($settings, function ($var) {
+		return $var['enabled'];
+	});
+	
+	$rand_key = array_rand($adv_arr);	
+	return $adv_arr[$rand_key];
+}
+
 /******************************************************************************
  * sets up theme defaults and registers support for various WordPress features 
  *****************************************************************************/
