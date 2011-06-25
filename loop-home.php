@@ -10,13 +10,12 @@
 	<?php $i = 0; while ( have_posts() ) : the_post(); ?>
 	
 		<?php if ( $i == 2 ) : ?>
-			
-			<div class="gallery garibaldi">
-				<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea">
-					<span class="title">Plac Garibaldi</span>
+			<?php $adv = getHomeAdv(); ?>
+			<div class="gallery <?php echo $adv['cls']; ?>">
+				<a class="place" href="<?php bloginfo( 'url' ); ?><?php echo $adv['url']; ?>">
+					<span class="title"><?php echo $adv['place']; ?></span>
 					<span>
-						Niedzielna Msza Święta o godzinie 
-						<span class="time">19:30</span> <img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-more.gif" alt="Więcej" />
+						<?php echo $adv['msg']; ?> <img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-more.gif" alt="Więcej" />
 					</span>
 				</a>
 			</div> <!-- gallery -->

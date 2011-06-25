@@ -380,11 +380,11 @@ form .required {
 }
 
 .rightGallery.villefranche01 {
-    background: url(img/subpage/gallery-villefranche-01.jpg) no-repeat center center;
+    background: url(img/subpage/galleries/villefranche-01.jpg) no-repeat center center;
 }
 
 .rightGallery.villefranche02 {
-    background: url(img/subpage/gallery-villefranche-02.jpg) no-repeat center center;
+    background: url(img/subpage/galleries/villefranche-02.jpg) no-repeat center center;
 }
 
 .rightGallery .place {
@@ -402,6 +402,7 @@ form .required {
     padding: 5px;
     text-decoration: none;
     border: none;
+    width: 120px;
 }
 
 .rightGallery .place span {

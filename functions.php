@@ -16,9 +16,9 @@ function getCarouselSettings() {
 	$settings = array();
 		
 	foreach ($options as $optKey => $optVal) {
-		$idx = preg_replace('/[^0-9]*/', '', $optKey);
-		$key = preg_replace('/homeimg([0-9]+)_/', '', $optKey);
-		
+		$idx = preg_replace('/^homeimg([0-9]+)_[a-zA-Z0-9]+$/', '$1', $optKey);
+		$key = preg_replace('/^homeimg([0-9]+)_/', '', $optKey);
+	
 		if ( is_array($settings[$idx]) ) {
 			$settings[$idx][$key] = $optVal;
 		} else {
@@ -27,6 +27,12 @@ function getCarouselSettings() {
 		
 		if ($key == 'src') {
 			$settings[$idx][$key] = get_bloginfo( 'template_directory' ) . '/img/homepage/main-carousel/' . $settings[$idx][$key];
+		} 
+		elseif ($key == 'place1') {
+			$settings[$idx]['place'] = $optVal;
+		}
+		elseif ($key == 'place2') {
+			$settings[$idx]['place'] .= '<br/>' . $optVal;
 		}
 	}
 	return $settings;
@@ -45,6 +51,52 @@ function getSubpImg() {
 	$opt['place'] = $options[$rand_key . '_place'];
 	
 	return $opt;
+}
+
+function getSubpAdv() {
+	$np_def_galleries = getDefaultOptions('galleries');
+	
+	$options = get_option( 'niceaparafia_theme_galleries', $np_def_galleries );
+	$rand_key = array_rand($options);
+	$rand_key = preg_replace('/_[a-z]+$/', '', $rand_key);
+	
+	$opt = array();
+	$opt['cls'] = $options[$rand_key . '_cls'];
+	$opt['src'] = $options[$rand_key . '_src'];
+	$opt['url'] = $options[$rand_key . '_url'];
+	$opt['title'] = $options[$rand_key . '_title'];
+	$opt['msg'] = $options[$rand_key . '_msg'];
+	
+	return $opt;
+}
+
+function getHomeAdv() {
+	$np_def_homepage_adv = getDefaultOptions('homepage-adverts');
+	
+	$options = get_option( 'niceaparafia_theme_hmpgadv', $np_def_homepage_adv );
+	$settings = array();
+	
+	foreach ($options as $optKey => $optVal) {
+		$idx = preg_replace('/[^0-9]*/', '', $optKey);
+		$key = preg_replace('/adv([0-9]+)_/', '', $optKey);
+		
+		if ( is_array($settings[$idx]) ) {
+			$settings[$idx][$key] = $optVal;
+		} else {
+			$settings[$idx] = array($key => $optVal);
+		}
+		
+		if ($key == 'msg') {
+			$settings[$idx][$key] = preg_replace('/([0-9]{2}:[0-9]{2})/', '<span class="time">$1</span>', $optVal);
+		}
+	}
+	
+	$adv_arr = array_filter($settings, function ($var) {
+		return $var['enabled'];
+	});
+	
+	$rand_key = array_rand($adv_arr);	
+	return $adv_arr[$rand_key];
 }
 
 /******************************************************************************
