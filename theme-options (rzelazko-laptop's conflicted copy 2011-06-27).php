@@ -7,36 +7,35 @@
 function getDefaultOptions($type) {
 	if ($type == 'carousel') {
 		$np_def_carousel_opts = array(
-			'homeimg' . ($i = 0) . '_src' => 'cole-de-villefranche.jpg',
-			'homeimg' .    $i    . '_place1' => 'Cole de Villefranche',
-			'homeimg' .    $i    . '_place2' => 'Nicea',
-			'homeimg' .    $i    . '_msg' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices consequat arcu, ac vehicula justo ultrices dapibus.',
-			'homeimg' .    $i    . '_msgSource' => 'Lipsum.com',
+			'homeimg0_src' => 'cole-de-villefranche.jpg',
+			'homeimg0_place1' => 'Cole de Villefranche',
+			'homeimg0_place2' => 'Nicea',
+			'homeimg0_msg' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices consequat arcu, ac vehicula justo ultrices dapibus.',
+			'homeimg0_msgSource' => 'Lipsum.com',
 		
-			'homeimg' . (++$i)   . '_src' => 'val-d-allos.jpg',
-			'homeimg' .    $i    . '_place1' => 'Val d\'Allos',
-			'homeimg' .    $i    . '_place2' => 'Alpy Prowansalskie',
-			'homeimg' .    $i    . '_msg' => 'Donec mi est, euismod at ultricies quis, pretium eget mi. Etiam vitae lorem quam. Donec fermentum, nisi ut vehicula sodales, ante nisi dapibus elit, nec rhoncus erat dolor a massa.',
-			'homeimg' .    $i    . '_msgSource' => 'Praesent leo',
+			'homeimg1_src' => 'val-d-allos.jpg',
+			'homeimg1_place1' => 'Val d\'Allos',
+			'homeimg1_place2' => 'Alpy Prowansalskie',
+			'homeimg1_msg' => 'Donec mi est, euismod at ultricies quis, pretium eget mi. Etiam vitae lorem quam. Donec fermentum, nisi ut vehicula sodales, ante nisi dapibus elit, nec rhoncus erat dolor a massa.',
+			'homeimg1_msgSource' => 'Praesent leo',
 		
-			'homeimg' . (++$i)   . '_src' => 'garibaldi.jpg',
-			'homeimg' .    $i    . '_place1' => 'Kaplica, Plac Garibaldi',
-			'homeimg' .    $i    . '_place2' => 'Nicea',
-			'homeimg' .    $i    . '_msg' => 'Phasellus eu dui massa, ut sollicitudin metus. Donec ac risus mauris. Nullam dui est, tempus at volutpat at, accumsan venenatis neque.',
-			'homeimg' .    $i    . '_msgSource' => 'Neque porro',
+			'homeimg2_src' => 'chemin-de-l-energie.jpg',
+			'homeimg2_place1' => 'Chemin de l\'Energie',
+			'homeimg2_place2' => 'Alpy Nadmorskie',
+			'homeimg2_msg' => 'A potem Bóg rzekł &laquo;Niech zbiorą się wody spod nieba w jedno miejsce i niech się ukaże powierzchnia sucha!&raquo;',
+			'homeimg2_msgSource' => 'Rdz 1',
 		
-			'homeimg' . (++$i)   . '_src' => 'chemin-de-l-energie.jpg',
-			'homeimg' .    $i    . '_place1' => 'Chemin de l\'Energie',
-			'homeimg' .    $i    . '_place2' => 'Alpy Nadmorskie',
-			'homeimg' .    $i    . '_msg' => 'A potem Bóg rzekł &laquo;Niech zbiorą się wody spod nieba w jedno miejsce i niech się ukaże powierzchnia sucha!&raquo;',
-			'homeimg' .    $i    . '_msgSource' => 'Rdz 1',
+			'homeimg3_src' => 'promenade-des-anglais.jpg',
+			'homeimg3_place1' => 'Promenade des Anglais',
+			'homeimg3_place2' => 'Nicea',
+			'homeimg3_msg' => 'Vestibulum a lorem in mi cursus vehicula. Mauris non lectus nunc, sed congue magna. Sed turpis sem, pretium non ultricies sed, pretium at odio. Nam in justo at lorem laoreet pharetra.',
+			'homeimg3_msgSource' => 'Lorem Ipsum',
 		
-			'homeimg' . (++$i)   . '_src' => 'promenade-des-anglais.jpg',
-			'homeimg' .    $i    . '_place1' => 'Promenade des Anglais',
-			'homeimg' .    $i    . '_place2' => 'Nicea',
-			'homeimg' .    $i    . '_msg' => 'Vestibulum a lorem in mi cursus vehicula. Mauris non lectus nunc, sed congue magna. Sed turpis sem, pretium non ultricies sed, pretium at odio. Nam in justo at lorem laoreet pharetra.',
-			'homeimg' .    $i    . '_msgSource' => 'Lorem Ipsum'
-		
+			'homeimg4_src' => 'st-pierre.jpg',
+			'homeimg4_place1' => 'Chapelle Saint Pierre',
+			'homeimg4_place2' => 'Saint Paul de Vence',
+			'homeimg4_msg' => 'Phasellus eu dui massa, ut sollicitudin metus. Donec ac risus mauris. Nullam dui est, tempus at volutpat at, accumsan venenatis neque.',
+			'homeimg4_msgSource' => 'Neque porro'
 		);
 		
 		return $np_def_carousel_opts;

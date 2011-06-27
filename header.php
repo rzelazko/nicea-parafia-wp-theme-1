@@ -43,10 +43,6 @@
 	<!--[if lt IE 8]>
 		<link href="<?php bloginfo( 'template_directory' ); ?>/css/ie-lt-8.css" type="text/css" rel="stylesheet" />
 	<![endif]-->
-	<!--[if lte IE 6]>
-		<link href="<?php bloginfo( 'template_directory' ); ?>/css/ie-lte-6.css" type="text/css" rel="stylesheet" />
-		<script src="<?php bloginfo( 'template_directory' ); ?>/css/iepngfix/iepngfix_tilebg.js" type="text/javascript"></script> 
-	<![endif]-->
 	
 	<link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold|PT+Sans+Narrow:regular,bold&subset=latin,cyrillic" />
 	

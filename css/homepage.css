@@ -132,6 +132,7 @@
 }
 
 #bodyRight .churchesList {
+	clear: both;
 	overflow: auto;
 	height: 100%;
 }
@@ -177,6 +178,7 @@
     float: left;
 }
 
+#bodyRight .info:last-child,
 #bodyRight .info.last {
     border: none;
 
@@ -192,6 +194,7 @@
 }
 
 .sidebarBlock {
+	clear: both;
 	border-top: 3px solid #252525;
 	overflow: auto;
 }
@@ -229,7 +232,8 @@
 	margin: 0 auto .5em auto;
 }
 
-.sidebarBlock h3 {
+.sidebarBlock span.title {
+	display: block;
 	font: bold 12pt "PT Sans", Arial, Helvetica, sans-serif;
 	margin: .5em 0 0 0;
 	text-align: center;

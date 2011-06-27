@@ -108,7 +108,6 @@ if ( ! function_exists( 'niceaparafia_setup' ) ):
 function niceaparafia_setup() {
 	add_theme_support('menus');
 	
-	
 	register_nav_menus(
 		array(
 			'header-menu' => __( 'Menu w nagłówku' ),
@@ -120,125 +119,6 @@ function niceaparafia_setup() {
 	
 }
 endif;
-
-/******************************************************************************
- * Registers dynamic sidebars
- *****************************************************************************/
-
-function nicea_widgets_init() {
-	// Area 1 - located at the top of the home page
-	register_sidebar( array(
-		'name' => __( 'Strona główna - góra', 'nicea' ),
-		'id' => 'homepage-top',
-		'description' => __( 'Informacje o mszach świętych', 'nicea' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
-	) );
-
-	// Area 2, located at the bottom of the home page
-	register_sidebar( array(
-		'name' => __( 'Strona główna - dół', 'nicea' ),
-		'id' => 'homepage-bottom',
-		'description' => __( 'Dane kontaktowe - ze zdjęciem', 'nicea' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<strong>',
-		'after_title' => '</strong>',
-	) );
-	
-	// Area 3, located above the add on the non-home pages
-	register_sidebar( array(
-		'name' => __( 'Pozostałe strony - góra', 'nicea' ),
-		'id' => 'non-homepage-top',
-		'description' => __( 'Dane kontaktowe - bez zdjęcia', 'nicea' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
-	) );
-	
-	//Area 3, located below the add on the non-home pages
-	register_sidebar( array(
-		'name' => __( 'Pozosałe strony - dół', 'nicea' ),
-		'id' => 'non-homepage-bottom',
-		'description' => __( 'Informacje o Mszach - skrócone', 'nicea' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
-	) );
-	
-
-	
-}
-/** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */
-add_action( 'widgets_init', 'nicea_widgets_init' );
-
-/**
- * Mass widget
- *
- * @since 2.8.0
- */
-class Mass_Widget extends WP_Widget {
-
-	function Mass_Widget() {
-		$control_ops = array('width' => 400, 'height' => 350);
-		$widget_ops = array('classname' => 'mass_widget', 'description' => __('Dodawanie mszy św. do panelu bocznego'));
-		$this->WP_Widget(false, 'Msza Święta', $widget_ops, $control_ops);
-	}
-
-	function widget( $args, $instance ) {
-		$args['title'] = $instance['title'];
-		$args['page'] = $instance['page'];
-		$args['text'] = $instance['text'];
-		$args['list'] = explode("\n", $instance['list']);
-		?>
-		<a class="place" href="<?php echo bloginfo( 'url' )."/".$args['page'];  ?>">
-			<?php echo $args['title'];  ?></a>
-		<div class="info">
-			<p><?php echo $args['text']?></p>
-			<ul>
-				<?php foreach ($args['list'] as $li) : ?>
-					<li><?php echo preg_replace('/^\s*\-/', '', preg_replace('/([0-9]{2}:[0-9]{2})/', '<strong>$1</strong>', $li)) ?></li>
-				<?php endforeach; ?>
-			</ul>
-			<h2><a class="action more" href="<?php echo bloginfo( 'url' )."/".$args['page']; ?>"
-				>Kościół Polski <?php echo $args['title'];?>, zdjęcia, mapa dojazdu</a></h2>
-		</div>
-		<?php 
-	}
-
-	function update( $new_instance, $old_instance ) {
-		return $new_instance;
-	}
-
-	function form( $instance ) {
-		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'page' => '', 'text' => '','list' => '' ) );
-		$title = ($instance['title']);
-		$page = ($instance['page']);
-		$text = $instance['text'];
-		$list = $instance['list'];
-?>
-		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>">Miejscowość:</label>
-		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
-
-		<p>
-			<label for="<?php echo $this->get_field_id('page'); ?>">Podstrona:</label>
-		<input class="widefat" id="<?php echo $this->get_field_id('page'); ?>" name="<?php echo $this->get_field_name('page'); ?>" type="text" value="<?php echo esc_attr($page); ?>" /></p>
-		<p>
-			<label for="<?php echo $this->get_field_id('text'); ?>">Opis:</label>
-		<textarea class="widefat" rows="4" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo $text; ?></textarea></p>
-		<p>
-			<label for="<?php echo $this->get_field_id('text'); ?>">Lista mszy (od myślnika):</label>
-		<textarea class="widefat" rows="4" cols="20" id="<?php echo $this->get_field_id('list'); ?>" name="<?php echo $this->get_field_name('list'); ?>"><?php echo $list; ?></textarea></p>
-<?php
-	}
-}
-
-register_widget('Mass_Widget'); 
 
 /******************************************************************************
  * add custom gravatar to settings->discussion

@@ -41,9 +41,7 @@
 		</div>
 		<?php endif; ?>
 	</div><!-- .churchesList -->
-	
-	
-	
+		
 	<div class="sidebarBlock">
 		<div class="left">
 			<span class="title">Wszystkie ogłoszenia</span>

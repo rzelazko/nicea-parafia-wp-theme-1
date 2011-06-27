@@ -8,3 +8,21 @@
 #commentform .comment-form-comment textarea {
 	width: 582px;
 }
+
+#body .sidebarBlock .left {
+	width: 45%;
+}
+
+.commentsList .commentBox {
+	padding: 1px;
+}
+
+.commentsList .commentBox .name,
+.commentsList .commentBox .name a,
+.commentsList .commentBox .date a {
+	zoom: 1;
+}
+
+#header .nav a {
+	zoom: 1;
+}

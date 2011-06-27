@@ -39,26 +39,24 @@
 + [functions, headimage] losowanie obrazka na podstrone
 + [loop-home] zarzadzanie reklamami (losowe wyswietlanie, zarzadzanie w panelu administracyjnym)
 + [sidebar] zarzadzanie reklamami <<galeria>> (losowe wyswietlanie, zarzadzanie w panelu administracyjnym)
-+ [ie6] przezroczystosc nie dziala na serwerze **naprawione przez plugin HITS-IE6 PNG Fix**
-+ [sidebar-home] naprawione: brak ramki dla ostatniej mszy
-+ [ie6] sprawdzic layout, poprawki str główna, komentarze
-+ [ie7] sprawdzic layout, poprawki str główna, komentarze 
-+ [sidebar-home] panel boczny zarzadzanie kosciolami
-+ [sidebar-home] panel boczny zarzadzanie informacjami kontaktowymi
 
 - [sidebar-home] edytowalne zdjecie ksiedza
-! [reklama] zdjecie kosciola w cannes na reklame na str glowna
+- [reklama] zdjecie kosciola w cannes na reklame na str glowna
 ! [headimage-*] zdjecia na strone glowna / podstrony
 ! [headimage-home] opisy zdjec i hasla do nich
+- [sidebar-home] panel boczny zarzadzanie kosciolami
+- [sidebar-home] panel boczny zarzadzanie informacjami kontaktowymi
 - [sidebar] panel boczny - archiwum
 - [sidebar] panel boczny - msze
 - [sidebar] panel boczny - kontakt
 - [wp] utworzyc i przetestowac formularz kontaktowy z jakiegos pluginu
 - [loop-*] support dla strony typu galeria (zdjec)  
+- [ie6] przezroczystosc nie dziala na serwerze
+- [ie6] sprawdzic layout 
+- [ie7] sprawdzic layout 
 - [ie8] sprawdzic layout 
 - [chrome] sprawdzic layout 
 - [opera] sprawdzic layout
-- [header] favicon
 
 - [serwer] podpiecie domeny i support dla wp w apachu
 - [serwer] utworzenie i ustawienie wordpressa na produkcyjnej bazie, konto ftp do aktualizacji wp
