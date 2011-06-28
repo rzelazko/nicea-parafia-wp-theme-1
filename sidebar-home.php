@@ -49,11 +49,8 @@
 		</div>
 		<div class="right">
 			<dl>
-				<dt>Liturgia słowa</dt>
-				<dd>Czytanie pierwsze: Kpł&nbsp;19,1-2.11-18</dd>
-				<dd>Czytanie drugie: Ps 19,8.9.10.15</dd>
-				<dd>Czytanie trzecie: Rz 5,12.17-19</dd>
-				<dd>Ewangelia: Mt 25,31-46</dd>
+				<dt>Liturgia słowa na dziś</dt>
+				<?php getReadingsForMass(); ?>
 			</dl>
 		</div>
 	</div><!-- .sidebarBlock -->

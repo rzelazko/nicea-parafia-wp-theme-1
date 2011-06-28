@@ -170,9 +170,24 @@ function nicea_widgets_init() {
 		'after_title' => '',
 	) );
 	
-
+	register_widget('Mass_Widget'); 
+	// registered WP_Widget_Text
 	
+	unregister_widget('WP_Widget_Calendar');
+	unregister_widget('WP_Widget_Pages');
+	unregister_widget('WP_Widget_Calendar');
+	unregister_widget('WP_Widget_Archives');
+	unregister_widget('WP_Widget_Links');
+	unregister_widget('WP_Widget_Meta');
+	unregister_widget('WP_Widget_Search');
+	unregister_widget('WP_Widget_Categories');
+	unregister_widget('WP_Widget_Recent_Posts');
+	unregister_widget('WP_Widget_Recent_Comments');
+	unregister_widget('WP_Widget_RSS');
+	unregister_widget('WP_Widget_Tag_Cloud');
+	unregister_widget('WP_Nav_Menu_Widget');	
 }
+
 /** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */
 add_action( 'widgets_init', 'nicea_widgets_init' );
 
@@ -238,7 +253,42 @@ class Mass_Widget extends WP_Widget {
 	}
 }
 
-register_widget('Mass_Widget'); 
+/******************************************************************************
+ * get readings for mass
+ *****************************************************************************/
+function getReadingsForMass() {
+	$ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'http://www.niedziela.pl/index/liturgia/liturgia1.php');
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    
+    $data = curl_exec($ch);
+    curl_close($ch);
+    
+    if ($data) {
+    	$reading_m = array();
+    	if (preg_match('|<table>(<tr><td\s+style=["\']?border\-bottom:dashed.*)</tr></table><div\s+style|mis', $data, $reading_m)) {
+    		$reading_tr = explode('</tr>', $reading_m[1]);
+    		foreach ($reading_tr as $tr) {
+    			echo '<dd>';
+    			echo iconv('ISO-8859-2', get_option('blog_charset'), str_replace("\n", ' ', strip_tags(preg_replace('|<b>(.+)\s+(.+)\s*</b>|mis', '$1&nbsp;$2', preg_replace('|<i>.*</i>|mis', '', $tr)))));
+    			echo '</dd>' . PHP_EOL;
+    		}
+    		
+    	}
+    	else {
+    		echo '<dd>Nie poprawne informacje o czytaniach</dd>';
+    	}
+    }
+    else {
+    	echo '<dd>Nie można pobrać informacji o czytaniach</dd>';
+    }
+}
+
 
 /******************************************************************************
  * add custom gravatar to settings->discussion
