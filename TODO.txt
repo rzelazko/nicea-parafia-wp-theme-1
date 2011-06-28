@@ -51,14 +51,15 @@
 + [chrome] sprawdzic layout 
 + [opera] sprawdzic layout
 + [sidebar-home] edytowalne zdjecie ksiedza
++ [header] favicon
 
 ! [reklama] zdjecie kosciola w cannes na reklame na str glowna
 ! [headimage-*] zdjecia na strone glowna / podstrony
 ! [headimage-home] opisy zdjec i hasla do nich
 - [sidebar] panel boczny - archiwum
 - [sidebar] panel boczny - kontakt
-- [wp] utworzyc i przetestowac formularz kontaktowy z jakiegos pluginu
-- [header] favicon
+- [sidebar] panel boczny - msze
+- [wp] utworzyc i przetestowac formularz kontaktowy z jakiegos pluginu oraz mape google
 
 - [serwer] podpiecie domeny i support dla wp w apachu
 - [serwer] utworzenie i ustawienie wordpressa na produkcyjnej bazie, konto ftp do aktualizacji wp

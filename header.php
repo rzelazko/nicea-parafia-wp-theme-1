@@ -45,7 +45,10 @@
 	<![endif]-->
 	
 	<link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold|PT+Sans+Narrow:regular,bold&subset=latin,cyrillic" />
-	
+
+	<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/favicon.ico" type="image/x-icon" />
+	<link rel="bookmark icon" href="<?php bloginfo( 'template_directory' ); ?>/favicon.ico" type="image/x-icon" />
+		
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
