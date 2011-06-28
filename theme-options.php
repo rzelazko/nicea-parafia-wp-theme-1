@@ -90,7 +90,10 @@ function getDefaultOptions($type) {
 		);
 		
 		return $np_def_galleries;
-	}	
+	}
+	else if ($type == 'homepage-contact-img') {
+		return array('image' => get_bloginfo('template_directory') . '/img/homepage/bronislaw-rosiek-01.jpg');
+	}
 	
 	$np_def_subpage_opts = array(
 		'subpimg0_cls' => 'cross',
@@ -118,6 +121,15 @@ function theme_options_init(){
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_subpimg' );
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_hmpgadv' );
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_galleries' );
+	register_setting( 'niceaparafia_options', 'niceaparafia_theme_hmpgcnct' );
+	
+	wp_enqueue_script('media-upload');
+	wp_enqueue_script('thickbox');	
+	wp_register_script('my-upload', 
+		get_bloginfo('template_directory') . '/js/adminpanel.js', 
+		array('jquery', 'media-upload', 'thickbox'));
+	wp_enqueue_script('my-upload');	
+	wp_enqueue_style('thickbox');
 } 
 
 /**
@@ -140,6 +152,7 @@ function theme_options_do_page() {
 	$np_def_subpage_opts = getDefaultOptions('subpage-img');
 	$np_def_homepage_adv = getDefaultOptions('homepage-adverts');
 	$np_def_galleries = getDefaultOptions('galleries');
+	$np_def_hmpgcnct = getDefaultOptions('homepage-contact-img');
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false;
@@ -362,6 +375,22 @@ function theme_options_do_page() {
 						</td>
 					</tr>
 				<?php endfor; ?>
+			</table>
+			
+			<h3>Kontakt - zdjęcie proboszcza</h3>
+			<?php $curr_options = get_option( 'niceaparafia_theme_hmpgcnct', $np_def_hmpgcnct ); ?>
+			<table>
+				<tr valign="top">
+					<th scope="row">Wgraj zdjęcie</th>
+					<td>
+						<p><label for="upload_image">
+							<input id="upload_image" type="text" size="36" name="niceaparafia_theme_hmpgcnct[image]" value="" />
+							<input id="upload_image_button" type="button" value="Wgraj" />
+							<br />Podaj adres URL lub wybierz nowe zdjęcie proboszcza
+						</label></p>
+						<p>Aktualne zdjęcie: <img src="<?php esc_attr_e( $curr_options['image'] ); ?>" alt="" /></p>
+					</td>
+				</tr>
 			</table>
 
 			<p class="submit">

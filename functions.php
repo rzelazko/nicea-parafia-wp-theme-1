@@ -99,6 +99,12 @@ function getHomeAdv() {
 	return $adv_arr[$rand_key];
 }
 
+function getHmpgContactImg() {
+	$np_def_hmpgcnct = getDefaultOptions('homepage-contact-img');
+	$options = get_option( 'niceaparafia_theme_hmpgcnct', $np_def_hmpgcnct );
+	return $options['image'];
+}
+
 /******************************************************************************
  * sets up theme defaults and registers support for various WordPress features 
  *****************************************************************************/

@@ -47,18 +47,17 @@
 + [sidebar-home] panel boczny zarzadzanie informacjami kontaktowymi
 + [sidebar-home] panel boczny - msze
 + [ie8] sprawdzic layout 
-+ [loop-*] support dla strony typu galeria (zdjec)  
++ [loop-*] support dla strony typu galeria (zdjec)
++ [chrome] sprawdzic layout 
++ [opera] sprawdzic layout
++ [sidebar-home] edytowalne zdjecie ksiedza
 
-- [sidebar-home] edytowalne zdjecie ksiedza
 ! [reklama] zdjecie kosciola w cannes na reklame na str glowna
 ! [headimage-*] zdjecia na strone glowna / podstrony
 ! [headimage-home] opisy zdjec i hasla do nich
 - [sidebar] panel boczny - archiwum
 - [sidebar] panel boczny - kontakt
 - [wp] utworzyc i przetestowac formularz kontaktowy z jakiegos pluginu
-- [loop-*] support dla strony typu galeria (zdjec)  
-- [chrome] sprawdzic layout 
-- [opera] sprawdzic layout
 - [header] favicon
 
 - [serwer] podpiecie domeny i support dla wp w apachu

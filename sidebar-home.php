@@ -59,7 +59,7 @@
 	<div class="contact">
 		<p class="postTitle">Probosz parafii w Nicei</p>
 		<p>
-			<img src="<?php bloginfo( 'template_directory' ); ?>/img/homepage/bronislaw-rosiek-01.jpg" 
+			<img src="<?php esc_attr_e( getHmpgContactImg() ); ?>" 
 				alt="Ksiądz Bronisław Rosiek" />
 			<?php if (!dynamic_sidebar('homepage-bottom') ) : ?>
 				<strong>Ks. Bronisław Rosiek</strong><br/>
