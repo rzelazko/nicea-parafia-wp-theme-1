@@ -108,6 +108,7 @@ if ( ! function_exists( 'niceaparafia_setup' ) ):
 function niceaparafia_setup() {
 	add_theme_support('menus');
 	
+	add_theme_support( 'post-formats', array( 'gallery' ) );	
 	
 	register_nav_menus(
 		array(
