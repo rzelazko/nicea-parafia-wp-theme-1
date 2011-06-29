@@ -47,7 +47,7 @@
 		</div>
 	</div>
 
-	<div class="rightBlock contentMargin">
+	<div class="rightBlock contentMargin massBox">
 		<h2 class="underline">Niedzielne Msze Święte</h2>
 		
 		<?php if (!dynamic_sidebar('non-homepage-bottom') ) : ?>
