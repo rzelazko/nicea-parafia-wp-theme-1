@@ -162,8 +162,8 @@ function nicea_widgets_init() {
 		'description' => __( 'Dane kontaktowe - bez zdjęcia', 'nicea' ),
 		'before_widget' => '',
 		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>',
 	) );
 	
 	//Area 3, located below the add on the non-home pages
@@ -227,7 +227,7 @@ class Mass_Widget extends WP_Widget {
 				<?php endforeach; ?>
 			</ul>
 			<h2><a class="action more" href="<?php echo bloginfo( 'url' ).'/'.$args['page']; ?>"
-				>Kościół Polski <?php echo $args['title'];?>, zdjęcia, mapa dojazdu</a></h2>
+				><span>Kościół Polski <?php echo $args['title'];?>, zdjęcia, mapa dojazdu</span></a></h2>
 		</div>
 		<?php 
 	}
@@ -277,15 +277,17 @@ function getReadingsForMass() {
     curl_close($ch);
     
     if ($data) {
-    	$reading_m = array();
-    	if (preg_match('|<table>(<tr><td\s+style=["\']?border\-bottom:dashed.*)</tr></table><div\s+style|mis', $data, $reading_m)) {
-    		$reading_tr = explode('</tr>', $reading_m[1]);
-    		foreach ($reading_tr as $tr) {
-    			echo '<dd>';
-    			echo iconv('ISO-8859-2', get_option('blog_charset'), str_replace("\n", ' ', strip_tags(preg_replace('|<b>(.+)\s+(.+)\s*</b>|mis', '$1&nbsp;$2', preg_replace('|<i>.*</i>|mis', '', $tr)))));
-    			echo '</dd>' . PHP_EOL;
+    	$reading_m = array();    	
+    	
+    	if (preg_match('~</font></a><table>(<tr><td\s+[^>]+><p\s+[^>]+>[^<]+</td><td\s+[^>]+>\s*<p\s+[^>]+><a\s+[^>]+><b>[^<]+(</b>\s+<i>[^<]+)?</i></b></a></td></tr>)+</table>~mis', $data, $reading_m)) {
+    		$reading_ex = explode('</tr>', $reading_m[0]);
+    		foreach ($reading_ex as $tr) {
+	    		$reading_str = iconv('ISO-8859-2', get_option('blog_charset'), str_replace("\n", ' ', $tr));
+	    		$reading_tr = array();
+	    		if (preg_match('~<p\s+[^>]+>([^<]+)</td><td\s+[^>]+>\s*<p\s+[^>]+><a\s+[^>]+><b>([^<]+)~mis', $reading_str, $reading_tr)) {
+	    			echo '<dd>' . $reading_tr[1] . ' ' . str_replace(' ', '&nbsp;', $reading_tr[2]) . '</dd>' . PHP_EOL;
+	    		}
     		}
-    		
     	}
     	else {
     		echo '<dd>Nie poprawne informacje o czytaniach</dd>';

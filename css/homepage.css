@@ -55,8 +55,8 @@
 
 
 #bodyLeft .post .msg {
-	max-height: 6em;
-	overflow: hidden;
+	overflow: auto;
+	clear: both;
 }
 
 #bodyLeft .post.actions {
