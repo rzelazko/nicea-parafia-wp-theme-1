@@ -343,7 +343,8 @@ form .required {
     padding: 5px 0;
 }
 
-.rightBlock h3 {
+.rightBlock .underline {
+	font: 14pt "PT Sans",Arial,Helvetica,sans-serif;
     margin: 0 0 1em 0;
     border-bottom: 1px solid #048000;
 }
@@ -365,6 +366,32 @@ form .required {
 
 .rightBlock .topMargin {
 	margin-top: 1em;
+}
+
+.rightBlock.insideMargins p,
+.rightBlock.insideMargins h4 {
+	margin: 1em 0 0 0;
+}
+
+.rightBlock a.place {
+	margin: 1em 0 0 0;
+	font: 12pt Georgia,"Times New Roman",Times,serif;
+	font-weight: bold;
+	color: #252525;
+	text-decoration: none;
+	border: 0;
+}
+
+.rightBlock .info p {
+	display: none;
+}
+
+.rightBlock .info li strong {
+	font-weight: normal;
+}
+
+.rightBlock .info {
+	margin: 0 0 1em 0;
 }
 
 .rightBlock ul {

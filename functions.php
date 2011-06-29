@@ -226,7 +226,7 @@ class Mass_Widget extends WP_Widget {
 					<li><?php echo preg_replace('/^\s*\-/', '', preg_replace('/([0-9]{2}:[0-9]{2})/', '<strong>$1</strong>', $li)) ?></li>
 				<?php endforeach; ?>
 			</ul>
-			<h2><a class="action more" href="<?php echo bloginfo( 'url' )."/".$args['page']; ?>"
+			<h2><a class="action more" href="<?php echo bloginfo( 'url' ).'/'.$args['page']; ?>"
 				>Kościół Polski <?php echo $args['title'];?>, zdjęcia, mapa dojazdu</a></h2>
 		</div>
 		<?php 

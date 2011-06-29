@@ -381,14 +381,13 @@ function theme_options_do_page() {
 			<?php $curr_options = get_option( 'niceaparafia_theme_hmpgcnct', $np_def_hmpgcnct ); ?>
 			<table>
 				<tr valign="top">
-					<th scope="row">Wgraj zdjęcie</th>
+					<th scope="row"><img src="<?php esc_attr_e( $curr_options['image'] ); ?>" alt="" /></th>
 					<td>
-						<p><label for="upload_image">
+						<label for="upload_image">
 							<input id="upload_image" type="text" size="36" name="niceaparafia_theme_hmpgcnct[image]" value="" />
 							<input id="upload_image_button" type="button" value="Wgraj" />
 							<br />Podaj adres URL lub wybierz nowe zdjęcie proboszcza
-						</label></p>
-						<p>Aktualne zdjęcie: <img src="<?php esc_attr_e( $curr_options['image'] ); ?>" alt="" /></p>
+						</label>
 					</td>
 				</tr>
 			</table>
