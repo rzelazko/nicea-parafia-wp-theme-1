@@ -373,7 +373,7 @@ form .required {
 	margin: 1em 0 0 0;
 }
 
-.rightBlock .massBox a.place {
+.rightBlock.massBox a.place {
 	margin: 1em 0 0 0;
 	font: 12pt Georgia,"Times New Roman",Times,serif;
 	font-weight: bold;

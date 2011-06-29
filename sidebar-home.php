@@ -9,36 +9,36 @@
 	<div class="churchesList">
 		<h3><span>Msze Święte na Lazurowym Wybrzeżu</span></h3>
 		<?php if (!dynamic_sidebar('homepage-top') ) : ?>
-		<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea">Nicea</a>
-		<div class="info">
-			<p>W Nicei Msza Święta odbywa się w każdą niedzielę w dwóch miejscach:</p>
-			<ul>
-				<li>Cole de Villefranche: <strong>10:00</strong></li>
-				<li>Place Garibaldi: <strong>19:30</strong></li>
-			</ul>
-			<a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea"
-				><span>Kościół Polski Nicea, zdjęcia, mapa dojazdu</span></a>
-		</div>
-		
-		<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-cannes">Cannes</a>
-		<div class="info">
-			<p>W Cannes Polska Masza Święta odbywa się w pierwszą i drugą niedzielę miesiąca:</p>
-			<ul>
-				<li>Eglise Sainte Devote: <strong>15:30</strong></li>
-			</ul>	
-			<a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-cannes"
-				><span>Kościół Polski Cannes, zdjęcia, mapa dojazdu</span></a>
-		</div>
-		
-		<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-monako">Monako</a>
-		<div class="info last">
-			<p>W Monako Polska Msza Święta odbywa się w trzecią i czwartą niedzielę miesiąca</p>
-			<ul>
-				<li>Eglise Sacre-Coeur: <strong>15:30</strong></li>
-			</ul>		
-			<a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-monako"
-				><span>Kościół Polski Monaco, zdjęcia, mapa dojazdu</span></a>
-		</div>
+			<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea">Nicea</a>
+			<div class="info">
+				<p>W Nicei Msza Święta odbywa się w każdą niedzielę w dwóch miejscach:</p>
+				<ul>
+					<li>Cole de Villefranche: <strong>10:00</strong></li>
+					<li>Place Garibaldi: <strong>19:30</strong></li>
+				</ul>
+				<h2><a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-nicea"
+					><span>Kościół Polski Nicea, zdjęcia, mapa dojazdu</span></a></h2>
+			</div>
+			
+			<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-cannes">Cannes</a>
+			<div class="info">
+				<p>W Cannes Polska Masza Święta odbywa się w pierwszą i drugą niedzielę miesiąca:</p>
+				<ul>
+					<li>Eglise Sainte Devote: <strong>15:30</strong></li>
+				</ul>	
+				<h2><a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-cannes"
+					><span>Kościół Polski Cannes, zdjęcia, mapa dojazdu</span></a></h2>
+			</div>
+			
+			<a class="place" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-monako">Monako</a>
+			<div class="info last">
+				<p>W Monako Polska Msza Święta odbywa się w trzecią i czwartą niedzielę miesiąca</p>
+				<ul>
+					<li>Eglise Sacre-Coeur: <strong>15:30</strong></li>
+				</ul>		
+				<h2><a class="action more" href="<?php bloginfo( 'url' ); ?>/kosciol-polski-monako"
+					><span>Kościół Polski Monaco, zdjęcia, mapa dojazdu</span></a></h2>
+			</div>
 		<?php endif; ?>
 	</div><!-- .churchesList -->
 		
