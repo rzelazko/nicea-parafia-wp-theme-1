@@ -55,12 +55,23 @@
 + [sidebar] panel boczny - archiwum
 + [sidebar] panel boczny - kontakt
 + [sidebar] panel boczny - msze
++ [serwer] podpiecie domeny i support dla wp w apachu
++ [serwer] utworzenie i ustawienie wordpressa na produkcyjnej bazie, konto ftp do aktualizacji wp
+
+- strona 404
+- kontakt z formularzem
+- mapy do stron z kosciolami
+- kontent na strone msze swiete
+- komentarze - blad brak podkreslenia pod dodaj komentarz (lub zla czcionka bo dziwnie wyglada)
+- linki w reklamach i kosciolach
+- galerie utworzy
+- artykuly utworzyc
+- wywalic _archiwum i link do niego z pierwszego wpisu (google?!)
+- google analitycs wpiac
+- profil ksiedza + uprawnienia
+- [wp] pluginy (cache, seo, anyspam), maile, backupy
 
 ! [reklama] zdjecie kosciola w cannes na reklame na str glowna
 ! [headimage-*] zdjecia na strone glowna / podstrony
 ! [headimage-home] opisy zdjec i hasla do nich
-- [wp] utworzyc i przetestowac formularz kontaktowy z jakiegos pluginu oraz mape google
 
-- [serwer] podpiecie domeny i support dla wp w apachu
-- [serwer] utworzenie i ustawienie wordpressa na produkcyjnej bazie, konto ftp do aktualizacji wp
-- [wp] pluginy (cache, seo, acl, anyspam, comments form), uprawnienia uzytkownika, ustawienia tematu, maile, backupy
