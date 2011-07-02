@@ -61,18 +61,18 @@
 + [content] ksiega gosci - import danych
 + [comment_form] - blad brak podkreslenia pod dodaj komentarz (lub zla czcionka bo dziwnie wyglada)
 + [reklama] zdjecie kosciola w cannes na reklame na str glowna
++ [content] mapy do stron z kosciolami
++ [content] linki w reklamach i kosciolach
++ [content] artykuly utworzyc
++ [server] robots txt i zablokowac _archiwum
++ [content] kontent na strone msze swiete
++ [admin] zaden z przyciskow insert nie dziala
++ [content] galerie utworzyc
 
-- kontakt z formularzem
-- mapy do stron z kosciolami
-- kontent na strone msze swiete
-- linki w reklamach i kosciolach
-- galerie utworzy
-- artykuly utworzyc
-- wywalic _archiwum i link do niego z pierwszego wpisu (google?!)
+- kontakt z formularzem lub emailem
 - google analitycs wpiac
 - profil ksiedza + uprawnienia
 - [wp] pluginy (cache, seo, anyspam), maile, backupy
 
 ! [headimage-*] zdjecia na strone glowna / podstrony
 ! [headimage-home] opisy zdjec i hasla do nich
-
