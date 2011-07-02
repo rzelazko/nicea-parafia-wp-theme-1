@@ -250,6 +250,15 @@ h1.contentMargin {
     margin: 0 0 .5em;
 }
 
+.postBlock .msg a.size-thumbnail {
+    text-decoration: none;
+    border: 0;
+}
+
+.postBlock .msg a img {
+	border: 0;
+}
+
 .postBlock .actions {
     margin: 0;
     padding: 1em 0;
