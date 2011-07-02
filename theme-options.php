@@ -123,13 +123,15 @@ function theme_options_init(){
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_galleries' );
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_hmpgcnct' );
 	
-	wp_enqueue_script('media-upload');
-	wp_enqueue_script('thickbox');	
-	wp_register_script('my-upload', 
-		get_bloginfo('template_directory') . '/js/adminpanel.js', 
-		array('jquery', 'media-upload', 'thickbox'));
-	wp_enqueue_script('my-upload');	
-	wp_enqueue_style('thickbox');
+	if (isset($_GET['page']) && $_GET['page'] == 'theme_options') {
+		wp_enqueue_script('media-upload');
+		wp_enqueue_script('thickbox');	
+		wp_register_script('my-upload', 
+			get_bloginfo('template_directory') . '/js/adminpanel.js', 
+			array('jquery', 'media-upload', 'thickbox'));
+		wp_enqueue_script('my-upload');	
+		wp_enqueue_style('thickbox');
+	}
 } 
 
 /**

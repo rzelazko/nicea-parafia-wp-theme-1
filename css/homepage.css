@@ -55,8 +55,16 @@
 
 
 #bodyLeft .post .msg {
-	overflow: auto;
 	clear: both;
+}
+
+#bodyLeft .post .msg a.size-thumbnail {
+    text-decoration: none;
+    border: 0;
+}
+
+#bodyLeft .post .msg a img {
+	border: 1px solid #048000;
 }
 
 #bodyLeft .post.actions {
