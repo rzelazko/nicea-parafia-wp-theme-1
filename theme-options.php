@@ -46,28 +46,28 @@ function getDefaultOptions($type) {
 			'adv0_enabled' => '1',
 			'adv0_src' => 'garibaldi.jpg',
 			'adv0_cls' => 'garibaldi',
-			'adv0_url' => '/kosciol-polski-nicea',
+			'adv0_url' => '/msze-swiete/kosciol-polski-nicea',
 			'adv0_place' => 'Nicea, Plac Garibaldi',
 			'adv0_msg' => 'Niedzielna Msza Święta o godzinie 19:30',
 
 			'adv1_enabled' => '1',
-			'adv1_src' => 'garibaldi.jpg',
-			'adv1_cls' => 'garibaldi',
-			'adv1_url' => '/kosciol-polski-cannes',
+			'adv1_src' => 'cannes.jpg',
+			'adv1_cls' => 'cannes',
+			'adv1_url' => '/msze-swiete/kosciol-polski-cannes',
 			'adv1_place' => 'Cannes',
 			'adv1_msg' => 'Pierwsza i druga niedziela miesiąca, godzina 15:30',
 
 			'adv2_enabled' => '1',
 			'adv2_src' => 'monaco.jpg',
 			'adv2_cls' => 'monaco',
-			'adv2_url' => '/kosciol-polski-monako',
+			'adv2_url' => '/msze-swiete/kosciol-polski-monako',
 			'adv2_place' => 'Monako',
 			'adv2_msg' => 'Trzecia i czwarta niedziela miesiąca, godzina 15:30',
 
 			'adv3_enabled' => '1',
 			'adv3_src' => 'villefranche.jpg',
 			'adv3_cls' => 'villefranche',
-			'adv3_url' => '/kosciol-polski-nicea',
+			'adv3_url' => '/msze-swiete/kosciol-polski-nicea',
 			'adv3_place' => 'Nicea, Cole de Villefranche',
 			'adv3_msg' => 'Niedzielna Msza Święta o godzinie 10:00'
 		);
@@ -78,13 +78,13 @@ function getDefaultOptions($type) {
 		$np_def_galleries = array(
 			'gallery0_src' => 'villefranche-01.jpg',
 			'gallery0_cls' => 'villefranche01',
-			'gallery0_url' => '/tag/galeria',
+			'gallery0_url' => '/tagi/galeria',
 			'gallery0_title' => 'Galeria parafialna',
 			'gallery0_msg' => 'Piknik Villefranche 02-05-2010',
 		
 			'gallery1_src' => 'villefranche-02.jpg',
 			'gallery1_cls' => 'villefranche02',
-			'gallery1_url' => '/tag/galeria',
+			'gallery1_url' => '/tagi/galeria',
 			'gallery1_title' => 'Galeria parafialna',
 			'gallery1_msg' => 'Piknik Villefranche 02-05-2010'			
 		);

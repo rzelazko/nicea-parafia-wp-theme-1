@@ -82,6 +82,10 @@
     background: url(../img/homepage/small-info/garibaldi.jpg) no-repeat center center;	
 }
 
+#bodyLeft .gallery.cannes {
+    background: url(../img/homepage/small-info/cannes.jpg) no-repeat center center;	
+}
+
 #bodyLeft .gallery.monaco {
     background: url(../img/homepage/small-info/monaco.jpg) no-repeat center center;	
 }

@@ -577,8 +577,8 @@ form .required {
 	overflow: hidden;
 }
 
-#commentform .reply-title {
-    font: 12pt "PT Sans", Arial, Helvetica, sans-serif;
+#reply-title {
+    font: bold 12pt Georgia, "Times New Roman", Times, serif;
 }
 
 #commentform .form-allowed-tags {
