@@ -205,6 +205,10 @@ h1.contentMargin {
 	margin: 1em 1em;
 }
 
+.postBlock .google-map {
+	margin: 1em 0 0;
+}
+
 .postBlock .pages {
 	font-weight: bold;
 }
