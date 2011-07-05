@@ -68,8 +68,8 @@
 + [content] kontent na strone msze swiete
 + [admin] zaden z przyciskow insert nie dziala
 + [content] galerie utworzyc
++ kontakt z formularzem lub emailem
 
-- kontakt z formularzem lub emailem
 - google analitycs wpiac
 - profil ksiedza + uprawnienia
 - [wp] pluginy (cache, seo, anyspam), maile, backupy
