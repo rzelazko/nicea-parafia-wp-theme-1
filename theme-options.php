@@ -96,13 +96,26 @@ function getDefaultOptions($type) {
 	}
 	
 	$np_def_subpage_opts = array(
-		'subpimg0_cls' => 'cross',
-		'subpimg0_src' => 'church-cross.jpg',
-		'subpimg0_place' => 'Miasto - opis miejsca',
+		'subpimg' . ($i = 0) . '_cls' => 'cross',
+		'subpimg' .    $i    . '_src' => 'church-cross.jpg', // https://picasaweb.google.com/Sz.Janikowski/RodzinaNaLazurze#5580744370149822178
+		'subpimg' .    $i    . '_place' => 'Miasto - opis miejsca',
 	
-		'subpimg1_cls' => 'monaco',
-		'subpimg1_src' => 'monaco.jpg',
-		'subpimg1_place' => 'Monako - kaplica OO.Karmelitów',
+		'subpimg' . (++$i)   . '_cls' => 'monaco', 
+		'subpimg' .    $i    . '_src' => 'monaco.jpg',
+		'subpimg' .    $i    . '_place' => 'Monako - kaplica OO.Karmelitów',
+	
+		'subpimg' . (++$i)   . '_cls' => 'braus', 
+		'subpimg' .    $i    . '_src' => 'braus.jpg', // https://picasaweb.google.com/Sz.Janikowski/LeGrandBraus#5602201987242798482
+		'subpimg' .    $i    . '_place' => 'Circuit du Grand Braus - Alpy Nadmorskie',
+	
+		'subpimg' . (++$i)   . '_cls' => 'st-pierre', 
+		'subpimg' .    $i    . '_src' => 'st-pierre.jpg', // https://picasaweb.google.com/Sz.Janikowski/CagnesSurMer#5568131472217339170
+		'subpimg' .    $i    . '_place' => 'Eglise Saint-Pierre, Cagnes-sur-Mer',
+	
+		'subpimg' . (++$i)   . '_cls' => 'honorat', 
+		'subpimg' .    $i    . '_src' => 'honorat.jpg', // https://picasaweb.google.com/Sz.Janikowski/RodzinaNaLazurze#5580744616341443074
+		'subpimg' .    $i    . '_place' => 'Île Saint-Honorat',
+	
 	);
 	
 	return $np_def_subpage_opts;

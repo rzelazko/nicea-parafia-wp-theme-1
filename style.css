@@ -856,6 +856,18 @@ form .required {
     background: url(img/subpage/top/church-cross.jpg) no-repeat;
 }
 
+#headImage.braus {
+    background: url(img/subpage/top/braus.jpg) no-repeat;
+}
+
+#headImage.st-pierre {
+    background: url(img/subpage/top/st-pierre.jpg) no-repeat;
+}
+
+#headImage.honorat {
+    background: url(img/subpage/top/honorat.jpg) no-repeat;
+}
+
 #headSlogan {
     position: absolute;
     color: #FFF;
