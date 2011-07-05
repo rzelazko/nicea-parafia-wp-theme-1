@@ -78,13 +78,13 @@ function getDefaultOptions($type) {
 		$np_def_galleries = array(
 			'gallery0_src' => 'villefranche-01.jpg',
 			'gallery0_cls' => 'villefranche01',
-			'gallery0_url' => '/tagi/galeria',
+			'gallery0_url' => '/kategorie/galeria/',
 			'gallery0_title' => 'Galeria parafialna',
 			'gallery0_msg' => 'Piknik Villefranche 02-05-2010',
 		
 			'gallery1_src' => 'villefranche-02.jpg',
 			'gallery1_cls' => 'villefranche02',
-			'gallery1_url' => '/tagi/galeria',
+			'gallery1_url' => '/kategorie/galeria/',
 			'gallery1_title' => 'Galeria parafialna',
 			'gallery1_msg' => 'Piknik Villefranche 02-05-2010'			
 		);
