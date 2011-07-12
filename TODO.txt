@@ -72,7 +72,7 @@
 + google analitycs wpiac
 + [wp] pluginy (cache, seo, anyspam), maile, backupy
 + [gallery] lightbox wpiąć
++ [headimage-home] opisy zdjec i hasla do nich
 
 - profil ksiedza + uprawnienia
 ! [headimage-*] zdjecia na strone glowna / podstrony
-! [headimage-home] opisy zdjec i hasla do nich
