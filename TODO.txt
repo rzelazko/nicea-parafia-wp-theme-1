@@ -69,10 +69,10 @@
 + [admin] zaden z przyciskow insert nie dziala
 + [content] galerie utworzyc
 + kontakt z formularzem lub emailem
++ google analitycs wpiac
++ [wp] pluginy (cache, seo, anyspam), maile, backupy
++ [gallery] lightbox wpiąć
 
-- google analitycs wpiac
 - profil ksiedza + uprawnienia
-- [wp] pluginy (cache, seo, anyspam), maile, backupy
-
 ! [headimage-*] zdjecia na strone glowna / podstrony
 ! [headimage-home] opisy zdjec i hasla do nich

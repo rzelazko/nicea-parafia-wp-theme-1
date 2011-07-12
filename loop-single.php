@@ -21,6 +21,24 @@
 		</div><!-- .postBlock .postDetail -->
 		
 		<?php comments_template( '', true ); ?>		
+		
+		<?php if ('gallery' == get_post_format( $post->ID )): ?>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+			<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.lightbox-0.5.pack.js"></script>
+			<script type="text/javascript">
+				$(function() {
+					$('dt[class=gallery-icon] a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".gif"]').lightBox({
+						imageLoading: '<?php bloginfo( 'template_directory' ); ?>/img/lightbox/lightbox-ico-loading.gif',
+						imageBtnClose: '<?php bloginfo( 'template_directory' ); ?>/img/lightbox/lightbox-btn-close.gif',
+						imageBtnPrev: '<?php bloginfo( 'template_directory' ); ?>/img/lightbox/lightbox-btn-prev.gif',
+						imageBtnNext: '<?php bloginfo( 'template_directory' ); ?>/img/lightbox/lightbox-btn-next.gif',
+						imageBlank: '<?php bloginfo( 'template_directory' ); ?>/img/lightbox/lightbox-blank.gif',
+						txtImage: 'Zdjęcie',
+						txtOf: 'z'
+					});
+				});			
+			</script>
+		<?php endif; ?>
 	<?php endwhile; ?> 
 
 <?php else : ?>
