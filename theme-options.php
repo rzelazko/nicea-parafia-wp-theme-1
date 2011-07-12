@@ -10,32 +10,32 @@ function getDefaultOptions($type) {
 			'homeimg' . ($i = 0) . '_src' => 'cole-de-villefranche.jpg',
 			'homeimg' .    $i    . '_place1' => 'Cole de Villefranche',
 			'homeimg' .    $i    . '_place2' => 'Nicea',
-			'homeimg' .    $i    . '_msg' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices consequat arcu, ac vehicula justo ultrices dapibus.',
-			'homeimg' .    $i    . '_msgSource' => 'Lipsum.com',
+			'homeimg' .    $i    . '_msg' => 'I mówili nawzajem do siebie: &laquo;Czy&nbsp;serce nie pałało w nas, kiedy rozmawiał z nami w drodze i Pisma nam wyjaśniał?&raquo;',
+			'homeimg' .    $i    . '_msgSource' => 'Łk 24,32',
 		
 			'homeimg' . (++$i)   . '_src' => 'val-d-allos.jpg',
 			'homeimg' .    $i    . '_place1' => 'Val d\'Allos',
 			'homeimg' .    $i    . '_place2' => 'Alpy Prowansalskie',
-			'homeimg' .    $i    . '_msg' => 'Donec mi est, euismod at ultricies quis, pretium eget mi. Etiam vitae lorem quam. Donec fermentum, nisi ut vehicula sodales, ante nisi dapibus elit, nec rhoncus erat dolor a massa.',
-			'homeimg' .    $i    . '_msgSource' => 'Praesent leo',
+			'homeimg' .    $i    . '_msg' => 'Błogosław, duszo moja, Pana! O Boże mój, Panie, jesteś bardzo wielki! Odziany we wspaniałość i majestat, światłem okryty jak płaszczem. Rozpostarłeś niebo jak namiot, wzniosłeś swe komnaty nad wodami.',
+			'homeimg' .    $i    . '_msgSource' => 'Ps 104',
 		
 			'homeimg' . (++$i)   . '_src' => 'garibaldi.jpg',
 			'homeimg' .    $i    . '_place1' => 'Kaplica, Plac Garibaldi',
 			'homeimg' .    $i    . '_place2' => 'Nicea',
-			'homeimg' .    $i    . '_msg' => 'Phasellus eu dui massa, ut sollicitudin metus. Donec ac risus mauris. Nullam dui est, tempus at volutpat at, accumsan venenatis neque.',
-			'homeimg' .    $i    . '_msgSource' => 'Neque porro',
+			'homeimg' .    $i    . '_msg' => 'O, gwiazdo najświętsza wiedź nas w&nbsp;niebios kraj. I wieczną szczęśliwość, o&nbsp;Boże, nam daj.',
+			'homeimg' .    $i    . '_msgSource' => 'Po górach dolinach',
 		
 			'homeimg' . (++$i)   . '_src' => 'chemin-de-l-energie.jpg',
 			'homeimg' .    $i    . '_place1' => 'Chemin de l\'Energie',
 			'homeimg' .    $i    . '_place2' => 'Alpy Nadmorskie',
-			'homeimg' .    $i    . '_msg' => 'A potem Bóg rzekł &laquo;Niech zbiorą się wody spod nieba w jedno miejsce i niech się ukaże powierzchnia sucha!&raquo;',
+			'homeimg' .    $i    . '_msg' => 'A potem Bóg rzekł &laquo;Niech zbiorą się wody spod nieba w jedno miejsce i&nbsp;niech się ukaże powierzchnia sucha!&raquo;',
 			'homeimg' .    $i    . '_msgSource' => 'Rdz 1',
 		
 			'homeimg' . (++$i)   . '_src' => 'promenade-des-anglais.jpg',
 			'homeimg' .    $i    . '_place1' => 'Promenade des Anglais',
 			'homeimg' .    $i    . '_place2' => 'Nicea',
-			'homeimg' .    $i    . '_msg' => 'Vestibulum a lorem in mi cursus vehicula. Mauris non lectus nunc, sed congue magna. Sed turpis sem, pretium non ultricies sed, pretium at odio. Nam in justo at lorem laoreet pharetra.',
-			'homeimg' .    $i    . '_msgSource' => 'Lorem Ipsum'
+			'homeimg' .    $i    . '_msg' => 'Pan kiedyś stanął nad brzegiem; Szukał ludzi gotowych pójść za Nim; By&nbsp;łowić serca; Słów Bożych prawdą',
+			'homeimg' .    $i    . '_msgSource' => 'Barka'
 		
 		);
 		
