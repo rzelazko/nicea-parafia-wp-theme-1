@@ -50,7 +50,9 @@ function NPCarousel() {
 			
 			firstElem.click(function () {
                 currentIdx -= 1;
-                currentIdx %= imgList.length;
+				if (currentIdx < 0) {
+					currentIdx = imgList.length - 1;
+				}
                 npCarousel.showImg(currentIdx);
                 window.clearInterval(carouselInterval);
 			});			
