@@ -52,6 +52,7 @@
 	<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/favicon.ico" type="image/x-icon" />
 	<link rel="bookmark icon" href="<?php bloginfo( 'template_directory' ); ?>/favicon.ico" type="image/x-icon" />
 		
+	<?php wp_enqueue_script("jquery"); ?>
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

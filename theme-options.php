@@ -98,7 +98,7 @@ function getDefaultOptions($type) {
 	$np_def_subpage_opts = array(
 		'subpimg' . ($i = 0) . '_cls' => 'cross',
 		'subpimg' .    $i    . '_src' => 'church-cross.jpg', // https://picasaweb.google.com/Sz.Janikowski/RodzinaNaLazurze#5580744370149822178
-		'subpimg' .    $i    . '_place' => 'Miasto - opis miejsca',
+		'subpimg' .    $i    . '_place' => 'Île Saint-Honorat',
 	
 		'subpimg' . (++$i)   . '_cls' => 'monaco', 
 		'subpimg' .    $i    . '_src' => 'monaco.jpg',

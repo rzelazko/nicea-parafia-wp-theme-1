@@ -5,7 +5,7 @@
  * Carousel adapted to Nicea Parafia page
  * @author Rafal Zelazko <rzelazko(at)gmail(dot)com>
  */
-function NPCarousel() {
+function NPCarousel($) {
 	var imgList = [],
         imageCache = [],
         currentIdx = 0,

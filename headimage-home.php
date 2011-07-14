@@ -29,7 +29,6 @@
 	<?php get_search_form(); ?>
 </div><!-- #headImage -->
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/NPCarousel.js"></script>
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/homepage.js"></script>
 <script type="text/javascript">
