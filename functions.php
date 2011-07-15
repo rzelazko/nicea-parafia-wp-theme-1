@@ -35,6 +35,7 @@ function getCarouselSettings() {
 			$settings[$idx]['place'] .= '<br/>' . $optVal;
 		}
 	}
+	shuffle($settings);
 	return $settings;
 }
 
