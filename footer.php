@@ -68,6 +68,7 @@
     </div><!-- .pageLogo -->
 </div><!-- #header -->
 
+<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/footer.js"></script>
 <?php wp_footer(); ?>
 
 <?php if ( function_exists( 'yoast_analytics' ) ) yoast_analytics(); ?>
