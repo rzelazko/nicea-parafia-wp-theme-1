@@ -30,13 +30,13 @@
 				><span>Kościół Polski Cannes, zdjęcia, mapa dojazdu</span></a>
 		</div>
 		
-		<a class="place" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-monako">Monaco</a>
+		<a class="place" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-monaco">Monaco</a>
 		<div class="info last">
 			<p>W Monaco Polska Msza Święta odbywa się w trzecią i czwartą niedzielę miesiąca</p>
 			<ul>
 				<li>Eglise Sainte Devote: <strong>15:30</strong></li>
 			</ul>		
-			<a class="action more" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-monako"
+			<a class="action more" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-monaco"
 				><span>Kościół Polski Monaco, zdjęcia, mapa dojazdu</span></a>
 		</div>
 		<?php endif; ?>

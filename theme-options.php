@@ -60,7 +60,7 @@ function getDefaultOptions($type) {
 			'adv2_enabled' => '1',
 			'adv2_src' => 'monaco.jpg',
 			'adv2_cls' => 'monaco',
-			'adv2_url' => '/msze-swiete/kosciol-polski-monako',
+			'adv2_url' => '/msze-swiete/kosciol-polski-monaco',
 			'adv2_place' => 'Monaco',
 			'adv2_msg' => 'Trzecia i czwarta niedziela miesiąca, godzina 15:30',
 
