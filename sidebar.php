@@ -66,17 +66,17 @@
 			<div class="info">
 				<p>W Cannes Polska Masza Święta odbywa się w pierwszą i drugą niedzielę miesiąca:</p>
 				<ul>
-					<li>Eglise Sainte Devote: <strong>15:30</strong></li>
+					<li>Eglise Sacre-Coeur: <strong>15:30</strong></li>
 				</ul>	
 				<h2><a class="action more" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-cannes"
 					><span>Kościół Polski Cannes, zdjęcia, mapa dojazdu</span></a></h2>
 			</div>
 			
-			<a class="place" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-monako">Monako</a>
+			<a class="place" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-monako">Monaco</a>
 			<div class="info last">
-				<p>W Monako Polska Msza Święta odbywa się w trzecią i czwartą niedzielę miesiąca</p>
+				<p>W Monaco Polska Msza Święta odbywa się w trzecią i czwartą niedzielę miesiąca</p>
 				<ul>
-					<li>Eglise Sacre-Coeur: <strong>15:30</strong></li>
+					<li>Eglise Sainte Devote: <strong>15:30</strong></li>
 				</ul>		
 				<h2><a class="action more" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-monako"
 					><span>Kościół Polski Monaco, zdjęcia, mapa dojazdu</span></a></h2>

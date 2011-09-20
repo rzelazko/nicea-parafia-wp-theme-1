@@ -61,7 +61,7 @@ function getDefaultOptions($type) {
 			'adv2_src' => 'monaco.jpg',
 			'adv2_cls' => 'monaco',
 			'adv2_url' => '/msze-swiete/kosciol-polski-monako',
-			'adv2_place' => 'Monako',
+			'adv2_place' => 'Monaco',
 			'adv2_msg' => 'Trzecia i czwarta niedziela miesiąca, godzina 15:30',
 
 			'adv3_enabled' => '1',
@@ -102,7 +102,7 @@ function getDefaultOptions($type) {
 	
 		'subpimg' . (++$i)   . '_cls' => 'monaco', 
 		'subpimg' .    $i    . '_src' => 'monaco.jpg',
-		'subpimg' .    $i    . '_place' => 'Monako - kaplica OO.Karmelitów',
+		'subpimg' .    $i    . '_place' => 'Monaco - kaplica OO.Karmelitów',
 	
 		'subpimg' . (++$i)   . '_cls' => 'braus', 
 		'subpimg' .    $i    . '_src' => 'braus.jpg', // https://picasaweb.google.com/Sz.Janikowski/LeGrandBraus#5602201987242798482
