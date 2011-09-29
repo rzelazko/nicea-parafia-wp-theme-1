@@ -1,38 +1,38 @@
 #bodyLeft {
-    float: left;
-    width: 459px;
-    text-align: left;
+	float: left;
+	width: 459px;
+	text-align: left;
 	background-color: #fff;
 }
 
 #bodyRight {
-    float: left;
-    width: 495px;
-    background-color: #d5d5d5;
+	float: left;
+	width: 495px;
+	background-color: #d5d5d5;
 }
 
 #bodyLeft .postTitle {
-    margin: 15px 15px 0 17px;
+	margin: 15px 15px 0 17px;
 }
 
 #bodyLeft .post {
-    margin: 1em 15px;
-    padding-bottom: 1em;
-    border-bottom: 1px dotted;
+	margin: 1em 15px;
+	padding-bottom: 1em;
+	border-bottom: 1px dotted;
 }
 
 #bodyLeft .post.afterAd {
-    border-top: 1px dotted;
+	border-top: 1px dotted;
 	padding-top: 1em;
 }
 
 #bodyLeft .post .title {
-    margin: 0 0 .5em;
-    font: bold 100% "PT Sans", Arial, Helvetica, sans-serif;
+	margin: 0 0 .5em;
+	font: bold 100% "PT Sans", Arial, Helvetica, sans-serif;
 }
 
 #bodyLeft .post .meta {
-    margin: 0 0 1em;
+	margin: 0 0 1em;
 }
 
 #bodyLeft .post .title a,
@@ -59,8 +59,8 @@
 }
 
 #bodyLeft .post .msg a.size-thumbnail {
-    text-decoration: none;
-    border: 0;
+	text-decoration: none;
+	border: 0;
 }
 
 #bodyLeft .post .msg a img {
@@ -79,58 +79,58 @@
 }
 
 #bodyLeft .gallery {
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-    width: 413px;
-    height: 188px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	width: 413px;
+	height: 188px;
 }
 
 #bodyLeft .gallery.garibaldi {
-    background: url(../img/homepage/small-info/garibaldi.jpg) no-repeat center center;	
+	background: url(../img/homepage/small-info/garibaldi.jpg) no-repeat center center;	
 }
 
 #bodyLeft .gallery.cannes {
-    background: url(../img/homepage/small-info/cannes.jpg) no-repeat center center;	
+	background: url(../img/homepage/small-info/cannes.jpg) no-repeat center center;	
 }
 
 #bodyLeft .gallery.monaco {
-    background: url(../img/homepage/small-info/monaco.jpg) no-repeat center center;	
+	background: url(../img/homepage/small-info/monaco.jpg) no-repeat center center;	
 }
 
 #bodyLeft .gallery.villefranche {
-    background: url(../img/homepage/small-info/villefranche.jpg) no-repeat center center;	
+	background: url(../img/homepage/small-info/villefranche.jpg) no-repeat center center;	
 }
 
 #bodyLeft .gallery .place {
-    display: block;
-    font-size: 10pt;
-    position: absolute;
-    color: #fff;
-    background-color: #252525;
-    filter: alpha(opacity = 80);
-    -moz-opacity: 0.8;
-    -khtml-opacity: 0.8;
-    opacity: 0.8;
-    top: 5px;
-    left: 5px;
-    padding: 5px;
-    text-decoration: none;
-    border: none;
+	display: block;
+	font-size: 10pt;
+	position: absolute;
+	color: #fff;
+	background-color: #252525;
+	filter: alpha(opacity = 80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	top: 5px;
+	left: 5px;
+	padding: 5px;
+	text-decoration: none;
+	border: none;
 	width: 150px;
 }
 
 #bodyLeft .gallery .place span {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #bodyLeft .gallery .place span.title {
-    display: block;
-    font: 10pt "PT Sans", Arial, Helvetica, sans-serif;
-    margin: 0 0 5px;
-    padding: 0;
-    border-bottom: 1px solid #048000;
+	display: block;
+	font: 10pt "PT Sans", Arial, Helvetica, sans-serif;
+	margin: 0 0 5px;
+	padding: 0;
+	border-bottom: 1px solid #048000;
 }
 
 #bodyLeft .gallery .place span.time {
@@ -139,8 +139,8 @@
 }
 
 #bodyLeft .gallery .place img {
-    display: inline;
-    border: none;
+	display: inline;
+	border: none;
 }
 
 #bodyRight .churchesList {
@@ -150,14 +150,14 @@
 }
 
 #bodyRight .churchesList h3 {
-    margin: 0;
+	margin: 0;
 }
 
 #bodyRight .churchesList h3 {
-    color: white;
-    background-color: #353535;
-    margin: 10px 0 0 0;
-    padding: 5px 0;
+	color: white;
+	background-color: #353535;
+	margin: 10px 0 0 0;
+	padding: 5px 0;
 	width: 100%;
 }
 
@@ -166,43 +166,43 @@
 }
 
 #bodyRight .place {
-    width: 125px;	
-    padding: 3px 0;
-    margin:  25px 20px 15px 15px;
+	width: 125px;	
+	padding: 3px 0;
+	margin:  25px 20px 15px 15px;
 	
-    background-color: #048000;;
-    color: white;
-    text-align: center;
-    font: 13pt "PT Sans", Arial, Helvetica, sans-serif;
+	background-color: #048000;;
+	color: white;
+	text-align: center;
+	font: 13pt "PT Sans", Arial, Helvetica, sans-serif;
 
-    display: inline; /*IE6 double margin bug*/
-    float: left;
+	display: inline; /*IE6 double margin bug*/
+	float: left;
 	clear: left;
 }
 
 #bodyRight .info {
-    width: 325px;
-    padding: 10px 0 15px;
-    margin: 0 10px 10px 0;	
-    border-bottom: 1px dotted;
+	width: 325px;
+	padding: 10px 0 15px;
+	margin: 0 10px 10px 0;	
+	border-bottom: 1px dotted;
 	
-    display: inline; /*IE6 double margin bug*/
-    float: left;
+	display: inline; /*IE6 double margin bug*/
+	float: left;
 }
 
 #bodyRight .info:last-child,
 #bodyRight .info.last {
-    border: none;
+	border: none;
 
 }
 
 #bodyRight .info ul {
-    margin: 5px 0 10px 0;	
-    padding-left: 2em; 
+	margin: 5px 0 10px 0;	
+	padding-left: 2em; 
 }
 
 #bodyRight .info a.more.time span {
-    font: bold 10pt Georgia, "Times New Roman", Times, serif;
+	font: bold 10pt Georgia, "Times New Roman", Times, serif;
 }
 
 .sidebarBlock {
@@ -229,15 +229,15 @@
 .sidebarBlock dd a {
 	color: #252525;
 	border: none;
-    padding-right: 12px;
-    background: url(../img/ico-more.gif) no-repeat right center;	
+	padding-right: 12px;
+	background: url(../img/ico-more.gif) no-repeat right center;	
 }
 
 .sidebarBlock dd a:hover {
 	color: #048000;
 	border-bottom: 1px dotted #048000;
-    padding-right: 12px;
-    background: url(../img/ico-more.gif) no-repeat right center;	
+	padding-right: 12px;
+	background: url(../img/ico-more.gif) no-repeat right center;	
 }
 
 .sidebarBlock table#wp-calendar {
@@ -289,118 +289,182 @@
 }
 
 #searchIco:hover {
-    color: #000;
-    text-shadow: 1px 1px 1px #999;
-    border-bottom: 1px dotted #048000;
+	color: #000;
+	text-shadow: 1px 1px 1px #999;
+	border-bottom: 1px dotted #048000;
 }
 
 #searchIco {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 #headSearch {
-    display: none;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: #252525;
-    filter: alpha(opacity = 80);
-    -moz-opacity: 0.8;
-    -khtml-opacity: 0.8;
-    opacity: 0.8;
+	display: none;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background-color: #252525;
+	filter: alpha(opacity = 80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	z-index: 10;
 }
 
 #headSearch .text {
-    width: 170px;
-    margin: 5px 0 5px 5px;
-    border: 1px solid #048000;
+	width: 170px;
+	margin: 5px 0 5px 5px;
+	border: 1px solid #048000;
 }
 
 #headSearch .button {
-    margin: 5px;
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
-    background-color: #048000;
-    color: #FFF;
-    border: 0 solid;
-    cursor: pointer;
+	margin: 5px;
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+	background-color: #048000;
+	color: #FFF;
+	border: 0 solid;
+	cursor: pointer;
 }
 
 #header {
-    height: 525px;
+	height: 525px;
 }
 
 #content {
-    top: 525px;
+	top: 525px;
 }
 
 #body {
-    background: url(../img/homepage/bg-body.gif) repeat-y;
+	background: url(../img/homepage/bg-body.gif) repeat-y;
 }
 
 #headImage {
-    height: 469px;
+	height: 469px;
 }
 
 #headSlogan {
-    width: 490px;
-    font-size: 12pt;
+	width: 490px;
+	font-size: 12pt;
 	text-align: left;
 }
 
 #headSlogan .place {
-    width: 190px;
+	width: 190px;
 	position: absolute;
 	bottom: 10px;
 	right: 300px;
-    text-align: center;
-    border-bottom: 0;
-    margin: 0;
-    font-size: 12pt;
+	text-align: center;
+	border-bottom: 0;
+	margin: 0;
+	font-size: 12pt;
 }
 
 #headSlogan .place .placeName {
-    margin: 10px 10px 5px 10px;
-    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+	margin: 10px 10px 5px 10px;
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
 }
 
 #headSlogan .place .scroller li {
-    margin: 0;
+	margin: 0;
 	padding: 0;
 	display: inline;
 	cursor: pointer;
 }
 
 #headSlogan .place .scroller img {
-    border: 0;
+	border: 0;
 }
 
 #headSlogan .place .scroller .bkgd span {
-    display: none;
+	display: none;
 }
 
 #headSlogan .place .scroller .selected {
-    color: #048000;
+	color: #048000;
 }
 
 #headSlogan .place .scroller {
-    margin: 5px 10px 0 10px;
-    border-top: 1px solid #048000;
+	margin: 5px 10px 0 10px;
+	border-top: 1px solid #048000;
 	padding: 0;
 	display: block;
 }
 
 #headSlogan .msg {
-    width: 300px;
+	width: 300px;
 	margin-left: 190px;
 }
 
 #headSlogan .msg div {
-    margin: 10px 10px 0 10px;
+	margin: 10px 10px 0 10px;
 }
 
 #headSlogan .msg div.msgSource {
-    font-size: 10pt;
-    margin: 0 10px 10px 10px;
-    text-align: right;
+	font-size: 10pt;
+	margin: 0 10px 10px 10px;
+	text-align: right;
 }
 
+@media handheld, screen and (max-width: 650px) {
+	#bodyLeft,
+	#bodyRight,
+	#body .sidebarBlock .left, 
+	#body .sidebarBlock .right {
+		width: auto;
+		float: none;
+	}
+	
+	#header {
+		height: 70px;
+	}
+
+	#content {
+		top: 70px;
+	}
+	
+	#body {
+		background: none repeat white;
+	}
+	
+	#bodyRight .churchesList {
+		height: auto;
+	}
+	
+	#bodyRight .churchesList h3 span {
+		display: block;
+		margin-left: 1em;
+		padding: 0;
+	}
+	
+	#bodyRight .place {
+		display: none;
+	}	
+	
+	#bodyRight .info {
+		width: auto;
+		padding: 0;
+		margin: 1em;	
+		border-bottom: 1px dotted;		
+		display: block;
+		float: none;
+	}
+	
+	.contact p img {
+		float: none;
+		display: block;
+		border: 1px solid #048000;
+	}
+}
+@media handheld, screen and (max-width: 420px) {	
+	#header {
+		height: 120px;
+	}
+	
+	#content {
+		top: 120px;
+	}
+	
+	#bodyLeft .gallery {
+		display: none;
+	}
+}
