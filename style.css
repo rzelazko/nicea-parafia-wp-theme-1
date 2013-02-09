@@ -533,6 +533,12 @@ form .required {
 	border: none;
 }
 
+.commentsList .commentBox p img {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
 .commentsList .commentBox .name,
 .commentsList .commentBox .date {	
 	padding: .5em .5em 0 0;	
