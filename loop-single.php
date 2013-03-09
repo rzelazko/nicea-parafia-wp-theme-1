@@ -22,7 +22,7 @@
 		
 		<?php comments_template( '', true ); ?>		
 		
-		<?php if ('gallery' == get_post_format( $post->ID )): ?>
+		<?php if ('gallery' == get_post_format( $post->ID ) || 'image' == get_post_format( $post->ID )): ?>
 			<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.lightbox-0.5.pack.js"></script>
 			<script type="text/javascript">
 				jQuery(function() {

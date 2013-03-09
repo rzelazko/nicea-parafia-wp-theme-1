@@ -16,13 +16,13 @@
 			<p class="meta">Utworzone: <?php my_posted_on(false); ?></p>
 			
 			<p class="msg">
-				<?php if ('gallery' == get_post_format( $post->ID )) : ?>
+				<?php if ('gallery' == get_post_format( $post->ID ) || 'image' == get_post_format( $post->ID ) ) : ?>
 					<?php
 						$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
 						if ( $images ) :
 							$total_images = count( $images );
 							$image = array_shift( $images );
-							$image_img_tag = wp_get_attachment_image( $image->ID, 'thumbnail' );
+							$image_img_tag =  has_post_thumbnail() ? get_the_post_thumbnail($post->ID, 'list-thumb') : wp_get_attachment_image( $image->ID, 'list-thumb' );
 					?>
 						<p>
 							<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a><br/>
@@ -31,7 +31,7 @@
 								number_format_i18n( $total_images )
 							); ?></em>
 						</p>
-					<?php endif; // if images ?>
+					<?php endif; /* if images*/ ?>
 				<?php else : ?>
 					<?php the_excerpt(); ?>
 				<?php endif; ?>

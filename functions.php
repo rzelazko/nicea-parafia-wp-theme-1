@@ -110,13 +110,18 @@ function getHmpgContactImg() {
  * sets up theme defaults and registers support for various WordPress features 
  *****************************************************************************/
 add_action( 'after_setup_theme', 'niceaparafia_setup' );
-
 if ( ! function_exists( 'niceaparafia_setup' ) ):
 function niceaparafia_setup() {
 	add_theme_support('menus');
-	
-	add_theme_support( 'post-formats', array( 'gallery' ) );	
-	
+
+	add_theme_support( 'post-formats', array( 'gallery', 'image' ) );	
+
+	add_theme_support( 'post-thumbnails' );
+	if ( function_exists( 'add_image_size' ) ) { 
+		add_image_size( 'homepage-thumb', 413, 188, true);
+		add_image_size( 'list-thumb', 580, 9999, false);
+	}	
+
 	register_nav_menus(
 		array(
 			'header-menu' => __( 'Menu w nagłówku' ),
@@ -124,8 +129,6 @@ function niceaparafia_setup() {
 		)
 	);
 		
-	add_theme_support( 'post-formats', array( 'gallery' ) );
-	
 }
 endif;
 

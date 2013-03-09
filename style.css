@@ -349,7 +349,6 @@ form .button {
 	font-size: 10pt;
 	line-height: 20px;
 	height: 20px;
-	padding: 2px 1em;
 }
 
 form .required {
@@ -549,8 +548,11 @@ form .required {
 }
 
 .commentsList .commentBox .name em {
-	color: #666666;
-	font: normal 8pt "PT Sans", Arial, Helvetica, sans-serif;
+	color: #800000;
+	background-color: #fff;
+	border: 1px solid #800000;
+	padding: .2em;
+	font: bold 8pt "PT Sans", Arial, Helvetica, sans-serif;
 }
 
 .commentsList .commentBox .date {
@@ -794,6 +796,16 @@ form .required {
 	margin: 0 auto;
 	background: url(img/subpage/bg-body.gif) repeat-y;
 	overflow: auto;
+}
+
+#body.fullpage {
+	background: #fff;
+}
+
+#body .fullpage {
+	float: none;
+	width: auto;
+	background-color: #fff;
 }
 
 #body .left {

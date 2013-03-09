@@ -60,5 +60,5 @@
 <body <?php body_class(); ?>>
 
 <div id="content">
-    <div class="main">
-        <div id="body">
+	<div class="main">
+		<div id="body"<?php if (is_singular() && has_post_format( 'image' )): ?> class="fullpage"<?php endif ?>>
