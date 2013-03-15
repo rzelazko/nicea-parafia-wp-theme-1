@@ -77,7 +77,7 @@ $fields =  array(
 	            '</p>',
 	'email'  => '<p class="comment-form-email">' . 
 	            '<input class="text" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />' .
-	            '<label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
+	            '<label for="email">' . __( 'Email' ) . ' <span class="form-comment">' . __('(Nie będzie publikowany)') . '</span></label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
 				'</p>',
 	'url'    => '<p class="comment-form-url">' . 
 	            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" />' .

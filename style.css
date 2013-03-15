@@ -613,7 +613,7 @@ form .required {
 	font: bold 12pt Georgia, "Times New Roman", Times, serif;
 }
 
-#commentform .form-allowed-tags {
+#commentform .form-allowed-tags, .form-comment {
 	color: #666666;
 	font: 8pt "PT Sans", Arial, Helvetica, sans-serif;
 }
