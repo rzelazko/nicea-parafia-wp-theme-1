@@ -211,6 +211,7 @@ h1.contentMargin {
 
 .postBlock .google-map {
 	margin: 1em 0 0;
+	max-width: 90%;
 }
 
 .postBlock .pages {
