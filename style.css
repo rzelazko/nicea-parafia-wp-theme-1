@@ -999,7 +999,8 @@ form .required {
 	
 	#body {
 		background: none repeat scroll 0 0 white;
-		width: auto;
+		width: 100%;
+		overflow-x: hidden;
 	}
 	
 	#body .left,
@@ -1053,6 +1054,8 @@ form .required {
 	
 	#footer .nav {
 		width: auto;
+		height: auto;
+		padding: .2em 0;
 		float: none;
 		display: block;
 		text-align: center;
