@@ -1,3 +1,4 @@
+(function() {
 	function webpCookieInfoInit() {
 		var cookieName = 'webpCookieInfoShown',
 			infoBar = document.getElementById('webpCookieInfo'),
@@ -37,4 +38,12 @@
 		
 		
 	}
-	window[addEventListener ? 'addEventListener' : 'attachEvent'](addEventListener ? 'load' : 'onload', webpCookieInfoInit);
+	// window[addEventListener ? 'addEventListener' : 'attachEvent'](addEventListener ? 'load' : 'onload', webpCookieInfoInit);
+
+	if (window.addEventListener) {
+		window.addEventListener('load', webpCookieInfoInit);
+	}
+	else if (window.attachEvent) {
+		window.attachEvent('onload', webpCookieInfoInit);
+	}
+}());

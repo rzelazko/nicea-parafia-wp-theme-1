@@ -70,8 +70,8 @@
 
 <?php if (getOnHolidays()): ?>
 	<div id="webpCookieInfo">
-		Witryna Parafialna jest &quot;na wakacjach&quot;. Następna aktualizacja po zakończeniu sezonu urlopowego.
-		<span id="webpCookieInfoBtn">Zamknij</span>
+		<p>Witryna Parafialna jest &quot;na&nbsp;wakacjach&quot;. Następna aktualizacja po zakończeniu sezonu urlopowego.</p>
+		<p><span id="webpCookieInfoBtn">Zamknij</span></p>
 	</div>
 	<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/holidays.js"></script>
 <?php endif; ?>
