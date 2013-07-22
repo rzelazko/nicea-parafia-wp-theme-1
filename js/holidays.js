@@ -15,15 +15,13 @@
 				return value;
 			},
 			setCookie = function(name, value) {
-				var cookieStr = escape(name) + '=',
-					expires = new Date();
+				var cookieStr = escape(name) + '=';
 					
 				if (typeof value != 'undefined') {
 					cookieStr += escape(value);
 				}
 
-				expires.setTime(expires.getTime()+.5*24*60*60*1000);
-				cookieStr += '; expires='+ expires.toGMTString() + '; path=/';
+				cookieStr += '; path=/';
 				document.cookie = cookieStr;
 			},
 			showInfo = true;
