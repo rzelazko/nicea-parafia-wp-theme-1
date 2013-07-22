@@ -44,9 +44,13 @@
 		<link href="<?php bloginfo( 'template_directory' ); ?>/css/ie-lt-8.css" type="text/css" rel="stylesheet" />
 	<![endif]-->
 	
-	<link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold|PT+Sans+Narrow:regular,bold&subset=latin,cyrillic" />
+	<!--link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold|PT+Sans+Narrow:regular,bold&subset=latin,cyrillic" /-->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,latin-ext">
 	<?php if (is_single() && 'gallery' == get_post_format()): ?>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_directory' ); ?>/css/jquery.lightbox-0.5.css" />		
+	<?php endif; ?>
+	<?php if (getOnHolidays()): ?>
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_directory' ); ?>/css/holidays.css" />
 	<?php endif; ?>
 
 	<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/favicon.ico" type="image/x-icon" />

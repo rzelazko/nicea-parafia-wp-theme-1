@@ -133,6 +133,7 @@ function theme_options_init(){
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_carousel' );
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_subpimg' );
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_hmpgadv' );
+	register_setting( 'niceaparafia_options', 'niceaparafia_theme_holidays' );
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_galleries' );
 	register_setting( 'niceaparafia_options', 'niceaparafia_theme_hmpgcnct' );
 	
@@ -168,6 +169,7 @@ function theme_options_do_page() {
 	$np_def_homepage_adv = getDefaultOptions('homepage-adverts');
 	$np_def_galleries = getDefaultOptions('galleries');
 	$np_def_hmpgcnct = getDefaultOptions('homepage-contact-img');
+	$np_def_holidays = false;
 
 	if ( ! isset( $_REQUEST['settings-updated'] ) )
 		$_REQUEST['settings-updated'] = false;
@@ -182,6 +184,30 @@ function theme_options_do_page() {
 
 		<form method="post" action="options.php">
 			<?php settings_fields( 'niceaparafia_options' ); ?>
+			
+			<h3>Wakacje</h3>
+			<table class="form-table">
+	
+				<?php $holidays_on = get_option( 'niceaparafia_theme_holidays', $np_def_holidays ); ?>
+
+				<tr valign="top">
+					<th scope="row"><strong>Pasek &quot;Strona na wakacjach&quot;</strong></th>
+					<td>
+						<fieldset>
+							<p><label>
+								<input type="checkbox" <?php if ( $holidays_on ): ?> checked="checked" <?php endif; ?>
+									id="niceaparafia_theme_holidays"
+									name="niceaparafia_theme_holidays" 
+									value="1" />
+							Wyświetlaj informację: &quot;strona na wakacjach&quot;
+							<span class="description">Zaznaczenie opcji spowoduje, 
+								że będzie widoczny pasek z informacją iż strona jest na wakacjach</span>
+							</label></p>
+						</fieldset>
+					</td>
+				</tr>
+			</table>
+								
 			
 			<h3>Karuzela</h3>
 			<table class="form-table">
@@ -394,6 +420,10 @@ function theme_options_do_page() {
 			
 			<h3>Kontakt - zdjęcie proboszcza</h3>
 			<?php $curr_options = get_option( 'niceaparafia_theme_hmpgcnct', $np_def_hmpgcnct ); ?>
+			<?php if (!isset($curr_options['image']) || $curr_options['image'] == '') {
+				$curr_options = $np_def_hmpgcnct;
+			} ?>
+
 			<table>
 				<tr valign="top">
 					<th scope="row"><img src="<?php esc_attr_e( $curr_options['image'] ); ?>" alt="" /></th>

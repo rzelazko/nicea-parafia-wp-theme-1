@@ -1,0 +1,36 @@
+#webpCookieInfo {
+	margin: 0;
+	padding: 0;
+	text-align: center;  
+	font-size: 12px; 
+	font-family: Georgia,"Times New Roman",Times,serif;;
+	color: #333;
+	line-height: 30px;
+	height: 30px; 
+	display: none;
+	border-width: 0;
+	background-color: rgb(242, 242, 242); 
+	position:fixed;
+	_position:absolute;
+	bottom: 0;
+	left: 0;
+	_bottom: expression(eval(document.body.scrollBottom));
+	width: 100%;
+}
+
+#webpCookieInfoBtn {
+	margin: 0;
+	padding: 0 6px;
+	font-size: 12px; 
+	font-family: "PT Sans",Arial,Helvetica,sans-serif;
+	color: #fff;
+	line-height: 22px;
+	height: 22px; 
+	display: inline-block;
+	border: 0px solid #CC6D00;
+	
+	cursor: pointer;
+	
+	background: #048000; /* Old browsers */
+}
+

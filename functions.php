@@ -100,9 +100,18 @@ function getHomeAdv() {
 	return $adv_arr[$rand_key];
 }
 
+function getOnHolidays() {
+	$np_def_holidays = false;
+	$options = get_option( 'niceaparafia_theme_holidays', $np_def_holidays );
+	return (bool)$options;
+}
+
 function getHmpgContactImg() {
 	$np_def_hmpgcnct = getDefaultOptions('homepage-contact-img');
 	$options = get_option( 'niceaparafia_theme_hmpgcnct', $np_def_hmpgcnct );
+	if (!isset($options['image']) || $options['image'] == '') {
+		$options = $np_def_hmpgcnct;
+	}
 	return $options['image'];
 }
 

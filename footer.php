@@ -68,6 +68,14 @@
     </div><!-- .pageLogo -->
 </div><!-- #header -->
 
+<?php if (getOnHolidays()): ?>
+	<div id="webpCookieInfo">
+		Witryna Parafialna jest &quot;na wakacjach&quot;. Następna aktualizacja po zakończeniu sezonu urlopowego.
+		<span id="webpCookieInfoBtn">Zamknij</span>
+	</div>
+	<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/holidays.js"></script>
+<?php endif; ?>
+
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/footer.js"></script>
 <?php wp_footer(); ?>
 
