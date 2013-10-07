@@ -129,6 +129,7 @@ function niceaparafia_setup() {
 	if ( function_exists( 'add_image_size' ) ) { 
 		add_image_size( 'homepage-thumb', 413, 188, true);
 		add_image_size( 'list-thumb', 580, 9999, false);
+		add_image_size( 'big-post-pic', 900, 900, false);
 	}	
 
 	register_nav_menus(
@@ -140,6 +141,15 @@ function niceaparafia_setup() {
 		
 }
 endif;
+
+/******************************************************************************
+ * Custom size for image upload - to hanlde image post type
+ *****************************************************************************/
+function nicea_add_custom_sizes( $sizes ) {
+	$my_sizes = array('big-post-pic' => __('Duży obrazek do galerii'));
+	return array_merge( $sizes, $my_sizes );
+}
+add_filter( 'image_size_names_choose', 'nicea_add_custom_sizes' );
 
 /******************************************************************************
  * Registers dynamic sidebars
