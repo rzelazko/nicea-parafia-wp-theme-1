@@ -33,7 +33,12 @@
 					<?php
 						$images = get_children( array( 'post_parent' => $post->ID, 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order', 'order' => 'ASC', 'numberposts' => 999 ) );
 						if ( $images ) :
-							$total_images = count( $images );
+							$post_content = get_the_content();
+							$img_tag_pattern = '~<img [^\>]*\ />~';
+							$img_tags = array();
+							preg_match_all( $img_tag_pattern, $post_content, $img_tags );
+
+							$total_images = $img_tags[0] ? count( $img_tags[0] ) : 0;
 							$image = array_shift( $images );
 							$image_img_tag =  has_post_thumbnail() ? get_the_post_thumbnail($post->ID, 'homepage-thumb', array('class' => 'aligncenter')) : wp_get_attachment_image( $image->ID, 'homepage-thumb', false, array('class' => 'aligncenter') );
 					?>
