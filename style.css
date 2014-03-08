@@ -227,8 +227,7 @@ h1.contentMargin {
 	font-weight: bold;
 }
 
-.postBlock .title,
-.postDetail .date {
+.postBlock .title {
 	font: 12pt "PT Sans", Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	margin: 0 0 .5em;
@@ -239,6 +238,20 @@ h1.contentMargin {
 	color: #252525;
 	text-decoration: none;
 	border: none;
+}
+
+.postDetail .date {
+	font: 8pt "PT Sans", Arial, Helvetica, sans-serif;
+	color: #666;
+	margin: 0 0 0;
+}
+
+.postDetail .date a {
+	color: #666;
+}
+
+.postBlock .tags {
+	margin-top: 0;
 }
 
 .postBlock .tags,

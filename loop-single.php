@@ -4,8 +4,8 @@
 		<h1 class="postTitle contentMargin"><?php the_title(); ?></h1>
 		
 		<div class="postBlock postDetail contentMargin">		
-			<p class="date"><?php my_posted_on(); ?></p>
-        	<p class="tags"><?php my_meta_info(); ?></p>
+			<?php /* p class="date">Utworzone: <?php my_posted_on(); ?></p */ ?>
+        	<p class="tags">Utworzone: <?php my_posted_on(); ?>. <?php my_meta_info(); ?></p>
         	
 			<div class="entry-content">
 				<?php the_content(); ?>

@@ -399,7 +399,7 @@ function my_is_home() {
 /******************************************************************************
  * my html helper functions
  *****************************************************************************/
-function my_posted_on($ucFirst = true) {
+function my_posted_on($ucFirst = false) {
 	$charset = get_bloginfo( 'charset' );
 	$date = mb_strtolower(get_the_date('l, j F Y'), $charset);
 	
