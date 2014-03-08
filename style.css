@@ -137,6 +137,7 @@ h1.contentMargin {
 	overflow: hidden;
 }
 
+.page .postBlock,
 .single .postBlock {
 	border-bottom-width: 0;
 }
