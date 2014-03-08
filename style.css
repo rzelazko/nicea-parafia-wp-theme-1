@@ -137,6 +137,10 @@ h1.contentMargin {
 	overflow: hidden;
 }
 
+.single .postBlock {
+	border-bottom-width: 0;
+}
+
 .postBlock p, 
 .postBlock h1, 
 .postBlock h2, 
@@ -163,7 +167,7 @@ h1.contentMargin {
 }
 
 .postBlock h3 {
-	font-size: 14pt;
+	font-size: 13pt;
 	font-weight: bold;
 }
 

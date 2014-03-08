@@ -5,16 +5,18 @@
  */
 ?>
 
-<div id="comments" class="postTitle contentMargin">
-	<?php if ( have_comments() ) : ?>
+<?php if ( have_comments() ) : ?>
+	<div id="comments" class="postTitle contentMargin">
 		<?php
 			printf( _n( 'Jeden komentarz do %2$s', '%1$s odpowiedzi na %2$s', get_comments_number(), 'nicea-parafia' ),
 			number_format_i18n( get_comments_number() ), get_the_title() );
 		?>
-	<?php else : ?>
+	</div> <!-- #comments -->
+<?php elseif ( comments_open() ) : ?>
+	<div id="comments" class="postTitle contentMargin">
 		Komentarze
-	<?php endif; ?>
-</div> <!-- #comments -->
+	</div> <!-- #comments -->
+<?php endif; ?>
 
 
 <?php if ( post_password_required() ) : ?>
@@ -62,9 +64,9 @@
 			</div> <!-- .commentBox -->
 		</div> <!-- .commentsList -->
 	<?php else : // if comments closed ?>
-		<div class="contentMargin">
+		<!-- <div class="contentMargin">
 			<p>Komentarze dla tego wpisu są zamknięte.</p>
-		</div> <!-- .contentMargin -->
+		</div> --> <!-- .contentMargin -->
 	<?php endif; // end if comments closed ?>
 	
 <?php endif; // end if have comments ?>
