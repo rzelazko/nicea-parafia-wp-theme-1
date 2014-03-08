@@ -8,7 +8,9 @@
 <?php /* Start the Loop */ ?>
 <?php if (have_posts()) : ?>
 	<?php $i = 0; while ( have_posts() ) : the_post(); ?>
-	
+		
+		<?php $hide_actions = false ?>
+		
 		<?php if ( $i == 2 ) : ?>
 			<?php $adv = getHomeAdv(); ?>
 			<div class="gallery <?php echo $adv['cls']; ?>">
@@ -50,14 +52,24 @@
 							); ?></em>
 						</p>
 					<?php endif; /* if images */?>
+				<?php elseif (has_post_thumbnail()) : ?>
+					<?php
+							$image_img_tag = get_the_post_thumbnail($post->ID, 'homepage-thumb', array('class' => 'aligncenter'));
+							$hide_actions = true;
+					?>
+					<p>
+						<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
+					</p>
 				<?php else : ?>
 					<?php the_excerpt(); ?>
 				<?php endif; ?>
 			</div><!-- .msg -->
-			
-			<p class="actions">
-				<a class="more action" href="<?php the_permalink() ?>"><span>Więcej</span></a>
-			</p>
+
+			<?php if (!$hide_actions) : ?>
+				<p class="actions">
+					<a class="more action" href="<?php the_permalink() ?>"><span>Więcej</span></a>
+				</p>
+			<?php endif ?>
 		</div> <!-- .post -->
 	
 	<?php $i++; endwhile; ?>
