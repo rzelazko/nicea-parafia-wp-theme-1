@@ -65,6 +65,8 @@
 
 #bodyLeft .post .msg a img {
 	border: 1px solid #048000;
+	max-width: 90%;
+	height: auto;
 }
 
 #bodyLeft .post.actions {
