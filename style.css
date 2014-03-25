@@ -667,9 +667,12 @@ form .required {
 	height: 120px;
 }
 
+input.wpcf7-submit,
 #commentform #submit {
 	padding: 2px 1em;
 	margin: 0;
+	line-height: auto;
+	height: auto;
 }
 
 #header .pageLogo {
