@@ -157,6 +157,12 @@ h1.contentMargin {
 	border: none;
 }
 
+.postBlock h2 + p,
+.postBlock h2 + h3,
+.postBlock h3 + p {
+	margin-top: 0;
+}
+
 .postBlock h1 {
 	font-size: 15pt;
 	font-weight: bold;
@@ -170,6 +176,7 @@ h1.contentMargin {
 .postBlock h3 {
 	font-size: 13pt;
 	font-weight: bold;
+	margin-top: .5em;
 }
 
 .postBlock h4, 
