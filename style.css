@@ -468,6 +468,14 @@ form .required {
 	background: url(img/subpage/galleries/villefranche-02.jpg) no-repeat center center;
 }
 
+.rightGallery.laghet01 {
+	background: url(img/subpage/galleries/laghet2013-01.jpg) no-repeat center center;
+}
+
+.rightGallery.laghet02 {
+	background: url(img/subpage/galleries/laghet2013-02.jpg) no-repeat center center;
+}
+
 .rightGallery .place {
 	display: block;
 	font-size: 10pt;

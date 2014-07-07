@@ -76,17 +76,17 @@ function getDefaultOptions($type) {
 	}
 	else if ($type == 'galleries') {
 		$np_def_galleries = array(
-			'gallery0_src' => 'villefranche-01.jpg',
-			'gallery0_cls' => 'villefranche01',
+			'gallery0_src' => 'laghet2013-01.jpg',
+			'gallery0_cls' => 'laghet01',
 			'gallery0_url' => '/kategorie/galeria/',
 			'gallery0_title' => 'Galeria parafialna',
-			'gallery0_msg' => 'Piknik Villefranche 02-05-2010',
+			'gallery0_msg' => 'Pielgrzymka do Laghet 2013',
 		
-			'gallery1_src' => 'villefranche-02.jpg',
-			'gallery1_cls' => 'villefranche02',
+			'gallery1_src' => 'laghet2013-02.jpg',
+			'gallery1_cls' => 'laghet02',
 			'gallery1_url' => '/kategorie/galeria/',
 			'gallery1_title' => 'Galeria parafialna',
-			'gallery1_msg' => 'Piknik Villefranche 02-05-2010'			
+			'gallery1_msg' => 'Pielgrzymka do Laghet 2013'			
 		);
 		
 		return $np_def_galleries;

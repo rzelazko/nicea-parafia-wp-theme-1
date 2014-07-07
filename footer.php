@@ -71,6 +71,7 @@
 <?php if (getOnHolidays()): ?>
 	<div id="webpCookieInfo">
 		<p>Witryna Parafialna jest &quot;na&nbsp;wakacjach&quot;. Następna aktualizacja po zakończeniu sezonu urlopowego.</p>
+		<p>W czasie wakacji nie&nbsp;ma Mszy&nbsp;Świętej w&nbsp;Cannes ani w&nbsp;Monako</p>
 		<p><span id="webpCookieInfoBtn">Zamknij</span></p>
 	</div>
 	<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/holidays.js"></script>
