@@ -105,6 +105,11 @@ h4, h5, h6 {
 	font-weight: bold;
 }
 
+abbr, acronym {
+	border-bottom: 1px dotted #252525;
+	cursor: help;
+}
+
 .title span {
 	font: 12pt "PT Sans", Arial, Helvetica, sans-serif;
 	font-weight: bold;
@@ -625,6 +630,10 @@ form .required {
 .commentsList .commentBox .comment {
 	padding: 0 .5em .5em;
 	clear: both;
+}
+
+.commentsList .commentBox .comment p {
+	margin-top: .5em;
 }
 
 .commentsList .commentBox .comment.pingback {
