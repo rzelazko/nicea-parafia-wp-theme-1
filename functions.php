@@ -337,7 +337,10 @@ function getReadingsForMass() {
     	
     	if (preg_match('~<a\s+href="#czytania">([^<]+)</a>~mis', $data, $reading_m)) {
 	    	$reading_str = iconv('ISO-8859-2', get_option('blog_charset'), str_replace("\n", ' ', $reading_m[1]));
-			echo '<dd>' . $reading_str . '</dd>' . PHP_EOL;
+			$reading_line = explode(';', $reading_str);
+			foreach ($reading_line as $rl) {
+				echo '<dd>' . $rl . '</dd>' . PHP_EOL;
+			}
     	}
     	else {
     		echo '<dd>Nie poprawne informacje o czytaniach</dd>';
