@@ -302,14 +302,12 @@ class Mass_Widget extends WP_Widget {
     if ($data) {
     	$reading_m = array();    	
     	
-    	if (preg_match('~</font></a><table>(<tr><td\s+[^>]+><p\s+[^>]+>[^<]+</td><td\s+[^>]+>\s*<p\s+[^>]+><a\s+[^>]+><b>[^<]+(</b>\s+<i>[^<]+)?</i></b></a></td></tr>)+</table>~mis', $data, $reading_m)) {
-    		$reading_ex = explode('</tr>', $reading_m[0]);
+    	if (preg_match('~</font></a><table>(.+)</table>~mis', $data, $reading_m)) {
+    		$reading_ex = explode('</tr>', $reading_m[1]);
     		foreach ($reading_ex as $tr) {
 	    		$reading_str = iconv('ISO-8859-2', get_option('blog_charset'), str_replace("\n", ' ', $tr));
-	    		$reading_tr = array();
-	    		if (preg_match('~<p\s+[^>]+>([^<]+)</td><td\s+[^>]+>\s*<p\s+[^>]+><a\s+[^>]+><b>([^<]+)~mis', $reading_str, $reading_tr)) {
-	    			echo '<dd>' . $reading_tr[1] . ' ' . str_replace(' ', '&nbsp;', $reading_tr[2]) . '</dd>' . PHP_EOL;
-	    		}
+	    		$reading_tr = strip_tags(str_replace('</td>', ' ', str_replace('</b>', ' ', $reading_str)));
+	    		echo '<dd>' . $reading_tr . '</dd>' . PHP_EOL;
     		}
     	}
     	else {
@@ -349,7 +347,6 @@ function getReadingsForMass() {
     	echo '<dd>Nie można pobrać informacji o czytaniach</dd>';
     }
 }
-
 
 /******************************************************************************
  * add custom gravatar to settings->discussion
