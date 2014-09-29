@@ -52,6 +52,7 @@
 				<dt>Liturgia słowa na dziś</dt>
 				<?php getReadingsForMass(); ?>
 			</dl>
+			<p><a class="action more" href="http://mateusz.pl/czytania/" rel="nofollow"><span>Treść czytań na Mateusz.pl</span></a></p>
 		</div>
 	</div><!-- .sidebarBlock -->
 	

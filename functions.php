@@ -286,7 +286,7 @@ class Mass_Widget extends WP_Widget {
 /******************************************************************************
  * get readings for mass
  *****************************************************************************/
-function getReadingsForMass() {
+/*function getReadingsForMass() {
 	$ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'http://www.niedziela.pl/index/liturgia/liturgia1.php');
     curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -311,6 +311,35 @@ function getReadingsForMass() {
 	    			echo '<dd>' . $reading_tr[1] . ' ' . str_replace(' ', '&nbsp;', $reading_tr[2]) . '</dd>' . PHP_EOL;
 	    		}
     		}
+    	}
+    	else {
+    		echo '<dd>Nie poprawne informacje o czytaniach</dd>';
+    	}
+    }
+    else {
+    	echo '<dd>Nie można pobrać informacji o czytaniach</dd>';
+    }
+}*/
+
+function getReadingsForMass() {
+	$ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'http://mateusz.pl/czytania/' . date('Y') . '/' . date('Ymd') . '.htm');
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    
+    $data = curl_exec($ch);
+    curl_close($ch);
+    
+    if ($data) {
+    	$reading_m = array();    	
+    	
+    	if (preg_match('~<a\s+href="#czytania">([^<]+)</a>~mis', $data, $reading_m)) {
+	    	$reading_str = iconv('ISO-8859-2', get_option('blog_charset'), str_replace("\n", ' ', $reading_m[1]));
+			echo '<dd>' . $reading_str . '</dd>' . PHP_EOL;
     	}
     	else {
     		echo '<dd>Nie poprawne informacje o czytaniach</dd>';
