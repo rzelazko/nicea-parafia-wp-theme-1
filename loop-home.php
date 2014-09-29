@@ -45,11 +45,13 @@
 							$image_img_tag =  has_post_thumbnail() ? get_the_post_thumbnail($post->ID, 'homepage-thumb', array('class' => 'aligncenter')) : wp_get_attachment_image( $image->ID, 'homepage-thumb', false, array('class' => 'aligncenter') );
 					?>
 						<p>
-							<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a><br/>
-							<em><?php printf( _n( 'Galeria zawiera <a %1$s>%2$s zdjęcie</a>.', 'Galeria zawiera <a %1$s>%2$s zdjęć</a>.', $total_images, 'niceaparafia' ),
-								'href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink dla %s', 'niceaparafia' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark"',
-								number_format_i18n( $total_images )
-							); ?></em>
+							<a class="size-thumbnail" href="<?php the_permalink(); ?>"><?php echo $image_img_tag; ?></a>
+							<?php if ($total_images > 0): ?><br/>
+								<em><?php printf( _n( 'Galeria zawiera <a %1$s>%2$s zdjęcie</a>.', 'Galeria zawiera <a %1$s>%2$s zdjęć</a>.', $total_images, 'niceaparafia' ),
+									'href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink dla %s', 'niceaparafia' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark"',
+									number_format_i18n( $total_images )
+								); ?></em>
+							<?php endif ?>
 						</p>
 					<?php endif; /* if images */?>
 				<?php elseif (has_post_thumbnail()) : ?>
