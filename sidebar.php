@@ -53,10 +53,10 @@
 		<?php if (!dynamic_sidebar('non-homepage-bottom') ) : ?>
 			<a class="place" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-nicea">Nicea</a>
 			<div class="info">
-				<p>W Nicei Msza Święta odbywa się w każdą niedzielę w dwóch miejscach:</p>
+				<p>W Nicei niedzielna Msza Święta odbywa się, co tydzień w dwóch miejscach:</p>
 				<ul>
-					<li>Cole de Villefranche: <strong>10:00</strong></li>
-					<li>Place Garibaldi: <strong>19:30</strong></li>
+					<li>Col de Villefranche: <strong>niedziela, 10:00</strong></li>
+					<li>Place Garibaldi: <strong>sobota, 18:00</strong></li>
 				</ul>
 				<h2><a class="action more" href="<?php bloginfo( 'url' ); ?>/msze-swiete/kosciol-polski-nicea"
 					><span>Kościół Polski Nicea, zdjęcia, mapa dojazdu</span></a></h2>
