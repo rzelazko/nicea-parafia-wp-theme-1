@@ -420,7 +420,7 @@ function theme_options_do_page() {
 			
 			<h3>Kontakt - zdjęcie proboszcza</h3>
 			<?php $curr_options = get_option( 'niceaparafia_theme_hmpgcnct', $np_def_hmpgcnct ); ?>
-			<?php if (!isset($curr_options['image']) || $curr_options['image'] == '') {
+			<?php if (!isset($curr_options['image']) /*|| $curr_options['image'] == ''*/) {
 				$curr_options = $np_def_hmpgcnct;
 			} ?>
 
@@ -429,7 +429,7 @@ function theme_options_do_page() {
 					<th scope="row"><img src="<?php esc_attr_e( $curr_options['image'] ); ?>" alt="" /></th>
 					<td>
 						<label for="upload_image">
-							<input id="upload_image" type="text" size="36" name="niceaparafia_theme_hmpgcnct[image]" value="" />
+						<input id="upload_image" type="text" size="36" name="niceaparafia_theme_hmpgcnct[image]" value="<?php esc_attr_e( $curr_options['image'] ); ?>" />
 							<input id="upload_image_button" type="button" value="Wgraj" />
 							<br />Podaj adres URL lub wybierz nowe zdjęcie proboszcza
 						</label>
