@@ -58,7 +58,7 @@
 	<?php if ( comments_open() ) : ?>
 		<div class="commentsList contentMargin">
 			<div class="commentBox">
-				<div class="comment pingback">
+				<div class="comment noComments pingback">
 					Brak komentarzy. Dodaj pierwszy wpis używając poniższego formularza.
 				</div>
 			</div> <!-- .commentBox -->

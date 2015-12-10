@@ -632,6 +632,11 @@ form .required {
 	clear: both;
 }
 
+.commentsList .commentBox .comment.noComments {
+	background-color: #fff;
+	padding-left: 0;
+}
+
 .commentsList .commentBox .comment p {
 	margin-top: .5em;
 }
