@@ -164,7 +164,9 @@ h1.contentMargin {
 
 .postBlock h2 + p,
 .postBlock h2 + h3,
-.postBlock h3 + p {
+.postBlock h3 + p,
+.postBlock p + ul,
+.postBlock p + ol {
 	margin-top: 0;
 }
 
@@ -206,7 +208,7 @@ h1.contentMargin {
 
 .postBlock ul li, 
 .postBlock ol li {
-	margin-top: 1em;
+	margin-top: .3em;
 }
 
 .fullpage .postBlock.postDetail p img {
