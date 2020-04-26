@@ -26,7 +26,7 @@ function getCarouselSettings() {
 		}
 		
 		if ($key == 'src') {
-			$settings[$idx][$key] = get_bloginfo( 'template_directory' ) . '/img/homepage/main-carousel/' . $settings[$idx][$key];
+			$settings[$idx][$key] = get_template_directory_uri() . '/img/homepage/main-carousel/' . $settings[$idx][$key];
 		} 
 		elseif ($key == 'place1') {
 			$settings[$idx]['place'] = $optVal;
@@ -319,7 +319,7 @@ class Mass_Widget extends WP_Widget {
     }
 }*/
 
-function getReadingsForMass() {
+function getReadingsForMassOld() {
 	$ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'http://mateusz.pl/czytania/' . date('Y') . '/' . date('Ymd') . '.htm');
     curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -340,6 +340,38 @@ function getReadingsForMass() {
 			$reading_line = explode(';', $reading_str);
 			foreach ($reading_line as $rl) {
 				echo '<dd>' . $rl . '</dd>' . PHP_EOL;
+			}
+    	}
+    	else {
+    		echo '<dd>Nie poprawne informacje o czytaniach</dd>';
+    	}
+    }
+    else {
+    	echo '<dd>Nie można pobrać informacji o czytaniach</dd>';
+    }
+}
+
+function getReadingsForMass() {
+	$ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'https://opoka.org.pl/liturgia_iframe.php');
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+    
+    $data = curl_exec($ch);
+    curl_close($ch);
+    
+    if ($data) {
+    	$reading_m = array();    	
+    	
+    	if (preg_match('~<div\s+class="sekcja\s+jeden">(.*)</div><div\s+class="sekcja\s+patroni">~mis', $data, $reading_m)) {
+	    	$reading_str = $reading_m[1];
+			$reading_line = explode('</div></div>', $reading_str);
+			foreach ($reading_line as $rl) {
+				echo '<dd>' . preg_replace('~<div(\s+[\w="]+)*>~i', ' ', $rl) . '</dd>' . PHP_EOL;
 			}
     	}
     	else {
@@ -415,8 +447,8 @@ add_filter('previous_comments_link_attributes', 'cls_prev_action');
  *****************************************************************************/
 if (!function_exists('mb_ucfirst')):
 function mb_ucfirst($str, $charset) {
-    $f = mb_strtoupper(mb_substr($str, 0, 1, $charset), $charset);
-    return $f . mb_substr($str, 1, mb_strlen($str, $charset), $charset);
+    $f = strtoupper(substr($str, 0, 1, $charset), $charset);
+    return $f . substr($str, 1, strlen($str, $charset), $charset);
 } 
 endif;
 
@@ -430,7 +462,7 @@ function my_is_home() {
  *****************************************************************************/
 function my_posted_on($ucFirst = false) {
 	$charset = get_bloginfo( 'charset' );
-	$date = mb_strtolower(get_the_date('l, j F Y'), $charset);
+	$date = strtolower(get_the_date('l, j F Y'));
 	
 	if ($ucFirst) {
 		$date = mb_ucfirst($date, $charset);

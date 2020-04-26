@@ -157,9 +157,13 @@ h1.contentMargin {
 .postBlock table,
 .postBlock ol,
 .postBlock ul {
-	margin: 1em 0 0;
+	margin: 1em 0;
 	font-family: Georgia, "Times New Roman", Times, serif;	
 	border: none;
+}
+
+.postBlock ul.wp-block-gallery {
+	margin: 0 5px 0 0;
 }
 
 .postBlock h2 + p,
@@ -315,6 +319,10 @@ h1.contentMargin {
 	border: 1px solid #048000;
 }
 
+.postBlock a img.space {
+	margin: .5em;
+}
+
 .postBlock .actions {
 	margin: 0;
 	padding: 1em 0;
@@ -348,7 +356,7 @@ h1.contentMargin {
 
 form {
 	margin: 0;
-	paddgin: 0;
+	padding: 0;
 }
 
 form input {
@@ -826,12 +834,14 @@ input.wpcf7-submit,
 }
 
 #header {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	margin-left: -512px;
+	position: relative;
+	/* top: 0; */
+	/* left: 50%; */
+	/* margin-left: -512px; */
 	width: 1024px;
-	height: 152px;
+	margin: 0 auto;
+	/* height: 152px; */
+	min-height: 60px;
 	background-color: #dce5e8;
 }
 
@@ -841,10 +851,10 @@ input.wpcf7-submit,
 }
 
 #content {
-	position: absolute;
-	top: 152px;
-	left: 0;
-	width: 100%;
+	/* position: absolute; */
+	/* top: 152px; */
+	/* left: 0; */
+	/* width: 100%; */
 }
 
 #footer {
@@ -855,19 +865,36 @@ input.wpcf7-submit,
 
 #content .main {
 	background-color: #dce5e8;
+	overflow: hidden;
+}
+
+#content .main:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 #footer .main {
 	background-color: #121212;
 	height: 100%;
-	overflow: auto;
+	/* overflow: auto; */
 }
 
 #body {
 	width: 954px;
 	margin: 0 auto;
 	background: url(img/subpage/bg-body.gif) repeat-y;
-	overflow: auto;
+	overflow: hidden;
+}
+
+#body:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 #body.fullpage {
@@ -1008,7 +1035,7 @@ input.wpcf7-submit,
 
 @media screen and (max-width: 1100px) {
 	#header {
-		margin-left: -490px;
+		/* margin-left: -490px; */
 		width: 980px;
 	}
 
@@ -1025,15 +1052,19 @@ input.wpcf7-submit,
 		display: none;
 	}
 	
+	#headSearch {
+		display: none;
+	}
+	
 	#header {
-		height: 70px;
+		/* height: 70px; */
 		width: 100%;
-		margin-left: 0;
-		left: 0;
+		/* margin-left: 0; */
+		/* left: 0; */
 	}
 	
 	#content {
-		top: 70px;
+		/* top: 70px; */
 	}
 
 	.postBlock img.attachment-list-thumb,
@@ -1048,24 +1079,28 @@ input.wpcf7-submit,
 	}
 	
 	#header .nav {
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		height: 100%;
+		min-height: 60px;
 		margin-left: 150px;
 		overflow: auto;
 	}
 
 	#header .nav ul {
 		display: block;
+		vertical-align: middle;
 		height: auto;
-		float: left;
+		float: none;
 		text-align: center;
-		font-size: 12pt;
+		font-size: 16pt;
 	}
 
 	#header .nav li {
 		display: inline;
 		float: none;
-		padding: 0 5px;
+		padding: 0 10px;
 	}	
 	
 	#body {
@@ -1138,17 +1173,18 @@ input.wpcf7-submit,
 		font: 12pt "PT Sans", Arial, Helvetica, sans-serif;
 	}
 }
-@media handheld, screen and (max-width: 350px) {
+@media handheld, screen and (max-width: 420px) {
 	.rightGallery {
 		display: none;
 	}
 	
 	#header {
-		height: 120px;
+		/* height: 120px; */
+		padding-top: 40px;
 	}
 	
 	#content {
-		top: 120px;
+		/* top: 120px; */
 	}
 	
 	#header .pageLogo {
@@ -1156,6 +1192,6 @@ input.wpcf7-submit,
 	}
 	
 	#header .nav {
-		margin: 40px 0 0 0;
+		margin: 0;
 	}
 }

@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
 		clearTimeout(aElem.data('timer'));     
 		aElem.data('timer', null); 
 		
-		window.location = '/wp-admin';   
+		window.location = aElem.attr('href').replace(/\/$/, '') + '/wp-admin';   
 		
 		return false; 
 	});

@@ -47,7 +47,7 @@
 			<span class="title">Wszystkie ogłoszenia</span>
 			<?php get_calendar( ); ?>
 		</div>
-		<div class="right">
+		<div class="right" id="refMateuszPl">
 			<dl>
 				<dt>Liturgia słowa na dziś</dt>
 				<?php getReadingsForMass(); ?>

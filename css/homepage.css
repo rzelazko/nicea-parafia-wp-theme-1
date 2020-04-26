@@ -211,7 +211,7 @@
 .sidebarBlock {
 	clear: both;
 	border-top: 3px solid #252525;
-	overflow: auto;
+	/* overflow: auto; */
 }
 
 .sidebarBlock dl {
@@ -263,6 +263,10 @@
 #body .sidebarBlock .right {
 	float: right;
 	width: 50%;
+}
+
+#bodyRight .sidebarBlock #refMateuszPl p {
+	margin-bottom: .5em;
 }
 
 .contact {
@@ -335,7 +339,7 @@
 }
 
 #content {
-	top: 525px;
+	/* top: 525px; */
 }
 
 #body {
@@ -409,6 +413,28 @@
 	text-align: right;
 }
 
+.excerpt {
+	width: 100%;
+    background-color: #048000;
+    padding: 2rem 1rem;
+    color: #fff;
+    text-align: center;
+    font: 12pt sans, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+	max-width: 413px;
+    margin: 0 auto .5rem auto;
+	line-height: 15pt;
+}
+
+.excerpt a {
+	color: #fff;
+}
+
+#bodyLeft .excerpt .title {
+    font: 15pt sans, Arial, Helvetica, sans-serif;
+	margin: 0 0 1rem 0;
+}
+
 @media handheld, screen and (max-width: 1024px) {
 	#bodyLeft,
 	#bodyRight,
@@ -419,11 +445,15 @@
 	}
 	
 	#header {
-		height: 70px;
+		height: auto;
+	}
+	
+	#header .nav li#navTopSearch {
+		display: none;
 	}
 
 	#content {
-		top: 70px;
+		/* top: 70px; */
 	}
 	
 	#body {
@@ -438,6 +468,10 @@
 		display: block;
 		margin-left: 1em;
 		padding: 0;
+	}
+	
+	#bodyRight .sidebarBlock #refMateuszPl {
+		display: none;
 	}
 	
 	#bodyRight .place {
@@ -461,11 +495,11 @@
 }
 @media handheld, screen and (max-width: 420px) {	
 	#header {
-		height: 120px;
+		/* height: 120px; */
 	}
 	
 	#content {
-		top: 120px;
+		/* top: 120px; */
 	}
 	
 	#bodyLeft .gallery {

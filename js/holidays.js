@@ -1,7 +1,7 @@
 (function() {
-	function webpCookieInfoInit() {
-		var cookieName = 'webpCookieInfoShown',
-			infoBar = document.getElementById('webpCookieInfo'),
+	function webpHolidayNoteInit() {
+		var cookieName = 'webpHolidayNoteShown',
+			infoBar = document.getElementById('webpHolidayNote'),
 			getCookie = function(name) {
 				var str = '; '+ document.cookie +';',
 					index = str.indexOf('; '+ escape(name) +'='),
@@ -30,7 +30,7 @@
 		if (getCookie(cookieName) === '') {
 			infoBar.style.display = 'block';
 			
-			document.getElementById('webpCookieInfoBtn').onclick = function() {
+			document.getElementById('webpHolidayNoteBtn').onclick = function() {
 				infoBar.style.display = 'none';
 				setCookie(cookieName, 'true');
 			}
@@ -38,12 +38,12 @@
 		
 		
 	}
-	// window[addEventListener ? 'addEventListener' : 'attachEvent'](addEventListener ? 'load' : 'onload', webpCookieInfoInit);
+	// window[addEventListener ? 'addEventListener' : 'attachEvent'](addEventListener ? 'load' : 'onload', webpHolidayNoteInit);
 
 	if (window.addEventListener) {
-		window.addEventListener('load', webpCookieInfoInit);
+		window.addEventListener('load', webpHolidayNoteInit);
 	}
 	else if (window.attachEvent) {
-		window.attachEvent('onload', webpCookieInfoInit);
+		window.attachEvent('onload', webpHolidayNoteInit);
 	}
 }());

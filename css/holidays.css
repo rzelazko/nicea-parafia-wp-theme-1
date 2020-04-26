@@ -1,4 +1,4 @@
-#webpCookieInfo {
+#webpHolidayNote {
 	margin: 0;
 	padding: 0 0 .5em 0;
 	text-align: left;  
@@ -15,12 +15,12 @@
 	width: 15em;
 }
 
-#webpCookieInfo p {
+#webpHolidayNote p {
 	margin: .5em .5em 0 .5em;
 	padding: 0;
 }
 
-#webpCookieInfoBtn {
+#webpHolidayNoteBtn {
   background: #048000;
   border-width: 0;
   color: #fff;

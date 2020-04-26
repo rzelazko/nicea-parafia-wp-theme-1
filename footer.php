@@ -38,41 +38,11 @@
     </div><!-- #footer -->
 </div><!-- #content -->
 
-<div id="header">
-    <div class="nav">
-        <ul>
-            <li class="first <?php if ( my_is_home() ) : ?> current-menu-item <?php endif; ?>"><a href="<?php bloginfo( 'url' ); ?>/"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-hmpg.png" /></a></li>
-            
-			<?php if ( my_is_home() ) : ?>
-				<li><span id="searchIco"><img src="<?php bloginfo( 'template_directory' ); ?>/img/ico-search.png" /></span></li>
-			<?php endif; ?>
-					
-            <?php wp_nav_menu( array( 
-            	'theme_location' => 'header-menu', 
-            	'container' => '', 
-            	'items_wrap' => '%3$s', 
-            	'depth' => 0
-            ) ); ?>
-
-        </ul>
-    </div><!-- .nav -->
-
-    <?php get_template_part( 'headimage', my_is_home() ? 'home' : 'subpage' ); ?>
-    
-    <div class="pageLogo">
-        <a href="<?php bloginfo( 'url' ); ?>/">
-        	<img src="<?php bloginfo( 'template_directory' ); ?>/img/nicea-parafia.png" alt="Parafia Nicea" />
-        	<span class="logoLine1">Polska Parafia</span>
-        	<span class="logoLine2">Nicea Cannes Monaco</span>
-        </a>
-    </div><!-- .pageLogo -->
-</div><!-- #header -->
-
 <?php if (getOnHolidays()): ?>
-	<div id="webpCookieInfo">
+	<div id="webpHolidayNote">
 		<p>Witryna Parafialna jest &quot;na&nbsp;wakacjach&quot;. Następna aktualizacja po zakończeniu sezonu urlopowego.</p>
 		<p>W czasie wakacji nie&nbsp;ma Mszy&nbsp;Świętej w&nbsp;Cannes ani w&nbsp;Monako</p>
-		<p><span id="webpCookieInfoBtn">Zamknij</span></p>
+		<p><span id="webpHolidayNoteBtn">Zamknij</span></p>
 	</div>
 	<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/holidays.js"></script>
 <?php endif; ?>
